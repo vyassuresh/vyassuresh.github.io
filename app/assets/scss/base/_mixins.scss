@@ -1,0 +1,44 @@
+@mixin developer-hover {
+
+    &__developer-hover:hover ~ &__designer {
+//        transform: translate(-100%);
+        width: 7%;
+    }
+
+    &__developer-hover:hover ~ &__designer &__container h1 {
+//        visibility: hidden;
+        font-size: rem(14);
+//        opacity: 0;
+    }
+
+    &__developer-hover:hover ~ &__developer {
+        width: 93%;
+    }
+
+    &__developer-hover:hover ~ &__developer &__container {
+        top: 20%;
+        left: 75%;
+    }
+
+}
+
+@mixin designer-hover {
+    &__designer-hover:hover ~ &__designer {
+        width: 93%;
+    }
+
+    &__designer-hover:hover ~ &__developer {
+        width: 7%;
+    }
+
+    &__designer-hover:hover ~ &__developer &__container h1 {
+//        visibility: hidden;
+        font-size: rem(14);
+//        opacity: 0;
+    }
+
+    &__designer-hover:hover ~ &__designer &__container {
+        top: 20%;
+        left: 25%;
+    }
+}

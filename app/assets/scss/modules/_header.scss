@@ -1,0 +1,47 @@
+%hover {
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+
+    &__designer,
+    &__developer {
+        position: relative;
+        width: 50%;
+        transition: all .8s;
+        flex: 1 1 auto;
+    }
+
+    &__container {
+        top: center;
+        left: center;
+        transition: all .6s;
+    }
+
+    &__developer {
+        background-color: $gray-dark;
+    }
+
+    &__designer {
+        background-color: #fff;
+    }
+
+    &__designer-hover {
+        @extend %hover;
+        left: 0;
+    }
+
+    &__developer-hover {
+        @extend %hover;
+        right: 0;
+    }
+
+    @include designer-hover;
+    @include developer-hover;
+}

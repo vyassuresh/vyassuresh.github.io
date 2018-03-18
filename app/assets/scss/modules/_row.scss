@@ -1,0 +1,7 @@
+.row {
+    @include grid;
+
+    &__6 {
+        @include cell(6);
+    }
+}
