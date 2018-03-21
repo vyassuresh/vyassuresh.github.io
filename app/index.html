@@ -4,33 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Josefin+Sans:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Suresh Vyas | Front-end web developer</title>
 </head>
 
 <body>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <div class="navigation">
+        <div class="navigation__button navigation__button--close">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="navigation__bg navigation__bg--1"></div>
+        <div class="navigation__bg navigation__bg--2"></div>
+        <div class="navigation__bg navigation__bg--3"></div>
+
+        <nav class="navigation__nav" aria-label="Main Navigation">
+            <ul class="navigation__list">
+                <li><a href="#">My Expertise</a></li>
+                <li><a href="#">My projects</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Get it touch</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
-    <div class="header__designer-hover"></div>
-    <div class="header__developer-hover"></div>
+        <div class="header__intro">
+            <h1 class="heading-primary">Hello<span class="red">.</span><br /> I<span class="clip">'</span>m Sures<span class="blue">h</span></h1>
 
-    <div class="header__designer">
-        <div class="header__container">
-            <h1 class="heading-primary heading-primary--red">{ designer }</h1>
+            <p class="header__intro-text"><span class="red">A</span> front-end web developer who loves to design rich interactive site<span class="blue">s</span>.</p>
         </div>
-    </div>
+    </header>
 
-    <div class="header__developer">
-        <div class="header__container">
-            <h1 class="heading-primary heading-primary--blue">&lt;&#47;developer&gt;</h1>
-        </div>
-    </div>
-</header>
-
-
-<!--    <script src="./assets/scripts/jquery.min.js"></script>-->
-    <script type="text/javascript" src="./temp/scripts/app-bundled.js"></script>
+    <script type="text/javascript" src="assets/scripts/chrome-vh-fix.js"></script>
+    <script type="text/javascript" src="temp/scripts/app-bundled.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,6 @@ postcssCenter = require('postcss-center');
 gulp.task('styles', function () {
 	var processors = [
         postcssUnits({ size: 16 }),
-		mqpacker,
 		postcssImport,
 		size,
         rucksack(),

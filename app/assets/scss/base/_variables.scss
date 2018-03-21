@@ -1,5 +1,16 @@
-$gray-light: #777;
+$mainRed: #e74c3c;
+$mainRedDark: #c72918;
+$mainBlue: #3473db;
+$mainBlueDark: #1f54ac;
+
+$white: #fff;
+$black: #000;
+
+$gray: #777;
 $gray-dark: #333;
 
-$mainRed: #f03434;
-$mainBlue: #2196f3;
+$breakpoints: (
+  'small': 530px,
+  'medium': 800px,
+  'large': 1200px
+)

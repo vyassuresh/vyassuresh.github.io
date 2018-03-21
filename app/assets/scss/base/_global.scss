@@ -4,11 +4,25 @@
     box-sizing: inherit;
 }
 
+html {
+    font-size: 12px;
+
+    @include media(">small") {
+        font-size: 14px
+    }
+
+    @include media(">medium") {
+        font-size: 16px
+    }
+
+    @include media(">700px", "portrait") {
+        font-size: 18px;
+    }
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     box-sizing: border-box;
-    color: $gray-light;
-    overflow: hidden;
 }
