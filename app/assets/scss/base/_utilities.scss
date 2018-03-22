@@ -1,0 +1,42 @@
+.u-center-text {
+    text-align: center;
+}
+
+.u-m-bottom {
+    &-v-large {
+        margin-bottom: rem(80) !important;
+    }
+
+    &-large {
+        margin-bottom: rem(60) !important;
+    }
+    &-medium {
+        margin-bottom: rem(40) !important;
+
+    }
+    &-small {
+        margin-bottom: rem(15) !important
+    }
+}
+
+.u-m-top {
+    &-huge {
+        margin-top: rem(100) !important;
+    }
+    &-v-large {
+        margin-top: rem(80) !important
+    }
+    &-large {
+        margin-top: rem(60) !important
+    }
+    &-medium {
+        margin-top: rem(40) !important
+    }
+    &-small {
+        margin-top: rem(15) !important
+    }
+}
+
+.u-no-b-margin {
+    margin-bottom: 0 !important;
+}

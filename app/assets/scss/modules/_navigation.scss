@@ -1,177 +1,32 @@
-%positioning {
-    top: rem(30);
-    right: rem(30);
-
-    @include media(">small") {
-        top: rem(45);
-        right: rem(45);
-    }
-
-    @include media(">medium") {
-        top: rem(60);
-        right: rem(60);
-    }
-}
-
 .navigation {
-
-    &__button {
-        background-color: $white;
-        size: rem(70);
-        position: fixed;
-        border-radius: 50%;
-        z-index: 2000;
-        text-align: center;
-        cursor: pointer;
-        @extend %positioning;
-
-        .bar {
-            display: block;
-            width: rem(35);
-            height: rem(2);
-            margin: 0 auto rem(9) auto;
-            border-right: rem(26.5) solid #000;
-            border-left: rem(4.5) solid #333;
-            transition: all .6s;
-        }
-        .bar:nth-of-type(1) {
-            transition: all .3s;
-            margin-top: rem(24);
-        }
-        .bar:nth-of-type(2) {
-            transform: rotate(-180deg);
-        }
-
-        &--open .bar {
-
-            &:nth-of-type(1) {
-                transform: translateX(10%);
-                opacity: 0;
-            }
-
-            &:nth-of-type(2) {
-                transform: rotate(227deg);
-
-                @include media(">medium") {
-                    transform: rotate(-137deg) translateY(0.06rem);
-                }
-
-                border-right-color: $mainRed;
-                border-left-color: $mainBlue;
-            }
-
-            &:nth-of-type(3) {
-                transform: rotate(-42deg) translate(rem(8), rem(-8));
-                border-right-color: $mainBlue;
-                border-left-color: $mainRed;
-            }
-        }
+    padding-top: 40px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    
+    .logo {
+        height: 30px;
     }
-
-    &__button--open ~ &__bg {
-        transform: scale(70);
-
-        &--2 {
-            transition-delay: .1s;
-        }
-        &--3 {
-            transition-delay: .2s;
-        }
-    }
-
-    &__button--close ~ &__bg {
-        &--1 {
-            transition-delay: .2s;
-        }
-        &--2 {
-            transition-delay: .1s;
-        }
-        &--3 {
-            transition-delay: 0s;
-        }
-    }
-
-    &__bg {
-        size: rem(60);
-        position: fixed;
-        border-radius: 50%;
-        transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-        opacity: 0.99;
-        transform: scale(0);
-        @extend %positioning;
-
-        &--1 {
-            background: $mainRedDark;
-            z-index: 500;
-        }
-
-        &--2 {
-            background: $mainBlueDark;
-            z-index: 501;
-        }
-
-        &--3 {
-            background: #333;
-            z-index: 502;
-        }
-    }
-
-    &__nav {
-        position: fixed 0;
-        width: 0;
-        visibility: hidden;
-        z-index: -100;
-        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
-
-        &--open {
-            width: 100%;
-            visibility: visible;
-            z-index: 600;
-        }
-    }
-
+    
     &__list {
         list-style: none;
-        top: center;
-        left: center;
-        text-align: center;
-        font-weight: 900;
-
-        li {
-            &:not(:last-child) {
-                margin-bottom: rem(40);
-            }
-
-            &:nth-child(odd) a {
-                background-image: linear-gradient(120deg, transparent 0%, transparent 40%, $mainRed 40%, $mainRed 70%, $mainBlue 70%);
-                background-size: 230%;
-            }
-
-            &:nth-child(even) a {
-                background-image: linear-gradient(120deg, transparent 0%, transparent 40%, $mainBlue 40%, $mainBlue 70%, $mainRed 70%);
-                background-size: 230%;
-            }
-        }
-
-        a {
-            font-size: rem(35);
-            text-decoration: none;
-            color: $white;
-            text-transform: uppercase;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease-in-out;
-            padding: rem(15) rem(40);
-
-            &:hover {
-                background-position: 90%;
-                transform: translateY(rem(-3));
-            }
+        display: flex;
+        min-width: 28%;
+        justify-content: space-between;
+        margin-left: auto;
+    } 
+    
+    a {
+        text-decoration: none;
+        color: #f7f7f7;
+        font-size: 110%;
+        
+        &::after {
+            margin-top: 10px;
+            content: '';
+            height: 2px;
+            width: 30px;
         }
     }
-
-    &__nav--open a {
-        opacity: 1;
-        visibility: visible;
-    }
+    
 }

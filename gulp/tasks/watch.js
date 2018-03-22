@@ -18,6 +18,7 @@ gulp.task('watch', function() {
 	});
 
 	watch('./app/**/*.html', function() {
+        gulp.start('inlinesource');
 		browserSync.reload();
 	});
 
@@ -28,7 +29,10 @@ gulp.task('watch', function() {
 	watch('./app/assets/scripts/**/*.js', function() {
 		gulp.start('scriptsRefresh');
 	});
-
+    
+    watch('./app/assets/images/icons/**/*.svg', function() {
+        gulp.start('grunticon');
+    });
 });
 
 gulp.task('cssInject', ['styles'], function() {

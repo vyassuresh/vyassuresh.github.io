@@ -1,0 +1,43 @@
+.heading-primary {
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    font-size: responsive 60px 134px;
+    font-range: 320px 1500px;
+
+    @include media("<400px") {
+        font-size: responsive 50px 60px;
+        font-range: 300px 400px;
+    }
+
+    @include media(">700px", "portrait") {
+        font-size: rem(96);
+    }
+
+    @include media(">900px", "portrait") {
+        font-size: rem(110);
+    }
+}
+
+.heading-secondary {
+    font-weight: 900;
+    color: $gray-dark;
+    font-size: rem(40);
+    letter-spacing: .5px;
+    word-spacing: 1px;
+}
+
+.heading-tertiary {
+    font-weight: 700;
+    color: $gray-dark;
+    font-size: rem(30);
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    margin-bottom: rem(20);
+}
+
+.subheading {
+    text-align: center;
+    font-size: rem(22);
+    font-weight: 300;
+}

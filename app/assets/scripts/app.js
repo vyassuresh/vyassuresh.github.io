@@ -1,23 +1,27 @@
-var menu = function () {
-    var myMenu = {
-        button: document.querySelector('.navigation__button'),
-        nav: document.querySelector('.navigation__nav')
-    }
+var Rellax = require('rellax');
+var rellax = new Rellax('.header');
 
-    myMenu.button.addEventListener('click', function () {
-        this.classList.toggle('navigation__button--close');
-        this.classList.toggle('navigation__button--open');
-        myMenu.nav.classList.toggle('navigation__nav--open');
-    });
-}
-
-menu();
-
-var options = [
+var vhFix = new VHChromeFix([
   {
     selector: '.header',
     vh: 100,
+  },
+    {
+    selector: '.content-wrapper',
+    vh: 100,
   }
-];
+]);
 
-var vhFix = new VHChromeFix(options);
+    
+window.onscroll = function() {
+    
+    var scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+    
+    if(scrollTop > 180) {
+        document.querySelector('.header__intro').classList.add('fadeOut');
+    }
+    
+    if(scrollTop < 180) {
+        document.querySelector('.header__intro').classList.remove('fadeOut');
+    }
+}
