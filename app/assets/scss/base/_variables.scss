@@ -9,12 +9,15 @@ $black: #000;
 $gray: #777;
 $gray-dark: #333;
 
-$breakpoints: (
-  'small': 530px,
-  'medium': 800px,
-  'large': 1200px
+$breakpoints: ( 
+    'small': 530px,
+    'medium': 800px,
+    'large': 1200px,
+    'menubp': 700px
 );
 
-$josefin: 'Josefin Sans', 'Lato', sans-serif;
+$josefin: 'Josefin Sans',
+'Lato',
+sans-serif;
 
 $gutter-x: 4%;

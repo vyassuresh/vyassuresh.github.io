@@ -2,5 +2,60 @@
     size: rem(50);
     display: block;
     margin: 0 auto rem(25) auto;
-    fill: $mainBlue; 
+    fill: $mainBlue;
+
+    @include media(">medium") {
+        margin: 0 auto rem(15) auto
+    }
+}
+
+.icon-slider {
+    size: rem(80);
+    display: block;
+    margin: 0 auto rem(25) auto;
+}
+
+.icon-css3 {
+    fill: #1572B6;
+}
+
+.icon-html5 {
+    fill: #E34F26;
+}
+
+.icon-javascript {
+    fill: #F7DF1E;
+}
+
+.icon-jquery {
+    fill: #0769AD;
+}
+
+.icon-sass {
+    fill: #CC6699;
+}
+
+.icon-git {
+    fill: #F14E32;
+}
+
+.icon-photoshop {
+    fill: #00C8FF;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+    width: 90%;
+    margin: 0 auto;
+
+    @include media(">400px") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media(">650px") {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

@@ -1,10 +1,13 @@
+// @import '../base/_variables.scss'
 .header {
     height: 100vh;
     font-family: $josefin;
+    position: relative;
     background-size: cover;
     background-image: linear-gradient(rgba(#000, 0.7), rgba(#000, 0.7)),
     url('../images/cup-of-coffee.jpg');
     overflow-x: hidden;
+    transition: height 999999s;
 
     &__intro {
         position: absolute;
@@ -61,6 +64,32 @@
             @include media("height>850px") {
                 font-size: rem(29);
             }
+        }
+    }
+}
+
+/* To (probably partially) fix the buggy behaviour of IOS devices when using 100vh */
+
+.header {
+    /* iPad with portrait orientation. */
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+        & {
+            height: 1024px;
+        }
+    }
+
+    /* iPad with landscape orientation. */
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+        & {
+            height: 768px;
+        }
+    }
+
+    /**
+ * iPhone 5 You can also target devices with aspect ratio. */
+    @media screen and (device-aspect-ratio: 40/71) {
+        & {
+            height: 500px;
         }
     }
 }

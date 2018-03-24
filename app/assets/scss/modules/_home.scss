@@ -8,11 +8,30 @@
 }
 
 .content-container {
-    padding: 0 rem(20);
-}
+    width: 80%;
+    margin: 0 auto;
+
+    @include media(">medium") {
+        padding: 0 rem(20);
+        width: 100%;
+        margin: 0;
+    }
+
+    p {
+        font-size: rem(18);
+
+        @include media(">700px"){
+            font-size: rem(16);
+        }
+    }
+} 
 
 .section {
-    padding: rem(80) 0;
+    padding: rem(80) 0; 
+
+    &--no-p-bottom {
+        padding-bottom: 0;
+    }
     
     &--skillset {
         background-color: #eee;

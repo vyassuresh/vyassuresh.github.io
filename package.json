@@ -1,11 +1,15 @@
 {
-  "name": "Vyas Suresh",
+  "name": "vyas-suresh",
   "version": "1.0.0",
   "description": "",
   "dependencies": {
     "grunt": "^1.0.2",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-usemin": "^0.3.29",
     "jquery": "^3.3.1",
+    "postcss-scss": "^1.0.4",
     "rellax": "^1.6.0"
   },
   "devDependencies": {
@@ -19,6 +23,8 @@
     "del": "^3.0.0",
     "grunt-grunticon": "^2.3.2",
     "gulp-grunt": "^0.5.5",
+    "gulp-hash": "^4.2.2",
+    "gulp-hash-references": "^1.0.3",
     "gulp-html-import": "0.0.2",
     "gulp-inline-source": "^3.1.0",
     "gulp-postcss": "^7.0.1",

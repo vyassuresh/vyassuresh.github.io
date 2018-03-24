@@ -8,13 +8,7 @@ gulp.task('watch', function() {
 		notify: false,
 		server: {
 			baseDir: "app"
-		},
-        // Tunnel the Browsersync server through a random Public URL
-        // -> http://randomstring23232.localtunnel.me
-        tunnel: false,
-
-        // Attempt to use the URL "http://my-private-site.localtunnel.me"
-        tunnel: "mysite"
+		}
 	});
 
 	watch('./app/**/*.html', function() {

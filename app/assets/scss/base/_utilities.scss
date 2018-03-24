@@ -13,7 +13,7 @@
     &-medium {
         margin-bottom: rem(40) !important;
 
-    }
+    } 
     &-small {
         margin-bottom: rem(15) !important
     }
@@ -22,10 +22,15 @@
 .u-m-top {
     &-huge {
         margin-top: rem(100) !important;
-    }
+    }  
+
     &-v-large {
-        margin-top: rem(80) !important
-    }
+        margin-top: rem(60) !important;
+
+        @include media(">700px") {
+            margin-top: rem(80) !important;
+        } 
+    } 
     &-large {
         margin-top: rem(60) !important
     }

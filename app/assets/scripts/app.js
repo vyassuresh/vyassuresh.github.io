@@ -1,27 +1,10 @@
 var Rellax = require('rellax');
 var rellax = new Rellax('.header');
+var fixChromeAndroid = require('./modules/fixChromeAndroid.js');
+var fadeOnScroll = require('./modules/fadeOnScroll.js');
+var mobileMenu = require('./modules/mobileMenu.js');
 
-var vhFix = new VHChromeFix([
-  {
-    selector: '.header',
-    vh: 100,
-  },
-    {
-    selector: '.content-wrapper',
-    vh: 100,
-  }
-]);
+fixChromeAndroid();
+fadeOnScroll();
+mobileMenu();
 
-    
-window.onscroll = function() {
-    
-    var scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
-    
-    if(scrollTop > 180) {
-        document.querySelector('.header__intro').classList.add('fadeOut');
-    }
-    
-    if(scrollTop < 180) {
-        document.querySelector('.header__intro').classList.remove('fadeOut');
-    }
-}

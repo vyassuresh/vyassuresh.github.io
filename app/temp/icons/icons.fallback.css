@@ -4,11 +4,19 @@
 
 .icon-css3 { background-image: url('png/css3.png'); background-repeat: no-repeat; }
 
+.icon-git { background-image: url('png/git.png'); background-repeat: no-repeat; }
+
+.icon-github { background-image: url('png/github.png'); background-repeat: no-repeat; }
+
 .icon-html5 { background-image: url('png/html5.png'); background-repeat: no-repeat; }
 
 .icon-idea { background-image: url('png/idea.png'); background-repeat: no-repeat; }
 
 .icon-javascript { background-image: url('png/javascript.png'); background-repeat: no-repeat; }
+
+.icon-jquery { background-image: url('png/jquery.png'); background-repeat: no-repeat; }
+
+.icon-photoshop { background-image: url('png/photoshop.png'); background-repeat: no-repeat; }
 
 .icon-postcss { background-image: url('png/postcss.png'); background-repeat: no-repeat; }
 
