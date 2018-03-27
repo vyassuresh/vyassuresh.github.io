@@ -1,0 +1,37 @@
+.btn {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        padding: em(8) em(32);
+        border: 2px solid $mainRed;
+        border-radius: 100px;
+        display: inline-block;
+        transition: all 0.3s;
+        color: #333;
+    }
+    &:hover,
+    &:focus {
+        background-color: $mainRed;
+        color: $white-ish;
+        padding: em(8) em(40);
+    }
+
+    &--blue:link,
+    &--blue:visited {
+        border: 2px solid $mainBlue;
+
+        &:hover,
+        &:focus {
+            background-color: $mainBlue;
+            color: $white-ish;
+        }
+    }
+
+    &--white:link, &--white:visited {
+        color: $white-ish;
+    }
+
+    &--em {
+        font-size: 1em;
+    }
+}

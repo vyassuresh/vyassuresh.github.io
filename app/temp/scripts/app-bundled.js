@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar Rellax = __webpack_require__(/*! rellax */ \"./node_modules/rellax/rellax.js\");\nvar fixChromeAndroid = __webpack_require__(/*! ./modules/fixChromeAndroid.js */ \"./app/assets/scripts/modules/fixChromeAndroid.js\");\nvar fadeOnScroll = __webpack_require__(/*! ./modules/fadeOnScroll.js */ \"./app/assets/scripts/modules/fadeOnScroll.js\");\nvar mobileMenu = __webpack_require__(/*! ./modules/mobileMenu.js */ \"./app/assets/scripts/modules/mobileMenu.js\");\n// import {\n//     TweenMax,\n//     Power2,\n//     TimelineLite\n// } from \"gsap\";\n// import ScrollMagic from \"scrollmagic\";\n\nvar rellax = new Rellax('.header');\n\nfixChromeAndroid();\nfadeOnScroll();\nmobileMenu();\n\nvar controller = new ScrollMagic.Controller();\n\n// define movement of panels\nvar wipeAnimation = new TimelineMax().fromTo(\".project.project1\", 1, {\n    x: \"-130%\"\n}, {\n    x: \"0%\",\n    ease: Linear.easeNone\n}) // in from left\n.fromTo(\".project.project2\", 1, {\n    x: \"130%\"\n}, {\n    x: \"0%\",\n    ease: Linear.easeNone\n}) // in from right\n.fromTo(\".project.project3\", 1, {\n    y: \"-130%\"\n}, {\n    y: \"0%\",\n    ease: Linear.easeNone\n}) // in from top\n.fromTo(\".project.project4\", 1, {\n    y: \"130%\"\n}, {\n    y: \"0%\",\n    ease: Linear.easeNone\n}); // in from top\n\n// create scene to pin and link animation\nnew ScrollMagic.Scene({\n    triggerElement: \".divForScrollmagic\",\n    triggerHook: \"onLeave\",\n    duration: \"300%\"\n}).setPin(\".divForScrollmagic\", { pushFollowers: false }).setTween(wipeAnimation).addIndicators() // add indicators (requires plugin)\n.addTo(controller);\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
+eval("\n\nvar Rellax = __webpack_require__(/*! rellax */ \"./node_modules/rellax/rellax.js\");\nvar fixChromeAndroid = __webpack_require__(/*! ./modules/fixChromeAndroid.js */ \"./app/assets/scripts/modules/fixChromeAndroid.js\");\nvar fadeOnScroll = __webpack_require__(/*! ./modules/fadeOnScroll.js */ \"./app/assets/scripts/modules/fadeOnScroll.js\");\nvar mobileMenu = __webpack_require__(/*! ./modules/mobileMenu.js */ \"./app/assets/scripts/modules/mobileMenu.js\");\nvar projectSlider = __webpack_require__(/*! ./modules/projectSlider.js */ \"./app/assets/scripts/modules/projectSlider.js\");\n// import {\n//     TweenMax,\n//     Power2,\n//     TimelineLite\n// } from \"gsap\";\n// import ScrollMagic from \"scrollmagic\";\n\nvar rellax = new Rellax('.header');\n\nfixChromeAndroid();\nfadeOnScroll();\nmobileMenu();\nprojectSlider();\n\n//# sourceURL=webpack:///./app/assets/scripts/app.js?");
 
 /***/ }),
 
@@ -91,7 +91,7 @@ eval("\n\nvar Rellax = __webpack_require__(/*! rellax */ \"./node_modules/rellax
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar fadeOnScroll = function fadeOnScroll() {\n    window.onscroll = function () {\n\n        var scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;\n\n        if (scrollTop > 180) {\n            document.querySelector('.header__intro').classList.add('fadeOut');\n        }\n\n        if (scrollTop < 180) {\n            document.querySelector('.header__intro').classList.remove('fadeOut');\n        }\n    };\n};\n\nmodule.exports = fadeOnScroll;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/fadeOnScroll.js?");
+eval("\n\nvar fadeOnScroll = function fadeOnScroll() {\n    var controller = new ScrollMagic.Controller();\n\n    new ScrollMagic.Scene({\n        triggerElement: \".header__intro\",\n        triggerHook: \"0.3\",\n        duration: \"200px\"\n    }).setTween(TweenMax.fromTo(\".header__intro\", 15, {\n        opacity: 1\n    }, {\n        opacity: 0,\n        ease: Linear.easeNone\n    })).addTo(controller).addIndicators({\n        zindex: 999,\n        suffix: \"3\"\n    });\n};\n\nmodule.exports = fadeOnScroll;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/fadeOnScroll.js?");
 
 /***/ }),
 
@@ -116,6 +116,18 @@ eval("\n\nvar fixChromeAndroid = function fixChromeAndroid() {\n    var userAgen
 
 "use strict";
 eval("\n\nvar mobileMenu = function mobileMenu() {\n    document.querySelector('.navigation__button').addEventListener('click', function () {\n        this.querySelector('.navigation__icon').classList.toggle('navigation__icon--open');\n    });\n};\n\nmodule.exports = mobileMenu;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/mobileMenu.js?");
+
+/***/ }),
+
+/***/ "./app/assets/scripts/modules/projectSlider.js":
+/*!*****************************************************!*\
+  !*** ./app/assets/scripts/modules/projectSlider.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar projectSlider = function projectSlider() {\n    var controller = new ScrollMagic.Controller();\n\n    // define movement of panels\n    var wipeAnimation = new TimelineMax().fromTo(\".project.project1\", 1, {\n        x: \"-130%\"\n    }, {\n        x: \"0%\",\n        ease: Linear.easeNone\n    }) // in from left\n    .fromTo(\".project.project2\", 1, {\n        x: \"130%\"\n    }, {\n        x: \"0%\",\n        ease: Linear.easeNone\n    }) // in from right\n    .fromTo(\".project.project3\", 1, {\n        y: \"-130%\"\n    }, {\n        y: \"0%\",\n        ease: Linear.easeNone\n    }) // in from top\n    .fromTo(\".project.project4\", 1, {\n        y: \"130%\"\n    }, {\n        y: \"0%\",\n        ease: Linear.easeNone\n    }); // in from top\n\n    // create scene to pin and link animation\n    new ScrollMagic.Scene({\n        triggerElement: \".section--projects\",\n        triggerHook: \"onLeave\",\n        duration: \"300%\"\n    }).setPin(\".section--projects\", { pushFollowers: true }).setTween(wipeAnimation).addIndicators() // add indicators (requires plugin)\n    .addTo(controller);\n};\n\nmodule.exports = projectSlider;\n\n//# sourceURL=webpack:///./app/assets/scripts/modules/projectSlider.js?");
 
 /***/ }),
 

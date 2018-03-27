@@ -1,16 +1,22 @@
 var fadeOnScroll = function() {
-    window.onscroll = function () {
+    var controller = new ScrollMagic.Controller();
 
-        var scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
-
-        if (scrollTop > 180) {
-            document.querySelector('.header__intro').classList.add('fadeOut');
-        }
-
-        if (scrollTop < 180) {
-            document.querySelector('.header__intro').classList.remove('fadeOut');
-        }
-    }
+    new ScrollMagic.Scene({
+            triggerElement: ".header__intro",
+            triggerHook: "0.3",
+            duration: "200px"
+        })
+        .setTween(TweenMax.fromTo(".header__intro", 15, {
+            opacity: 1
+        }, {
+                opacity: 0,
+                ease: Linear.easeNone
+            }))
+        .addTo(controller)
+        .addIndicators({
+            zindex: 999,
+            suffix: "3"
+        });
 }
 
 module.exports = fadeOnScroll;

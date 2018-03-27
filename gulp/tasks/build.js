@@ -11,20 +11,21 @@ htmlImport = require('gulp-html-import');
 gulp.task('importHtml', ['deleteindexHtml'], function () {
     gulp.src('./app/main.html')
         .pipe(htmlImport('./app/components/'))
-        .pipe(rename('index.html'))
-        .pipe(gulp.dest('./app'));
+        .pipe(rename('index2.html'))
+        .pipe(gulp.dest('./app/temp'));
 })
 
 gulp.task('inlinesource', ['importHtml'], function () {
     var options = {
         compress: false
     };
-    return gulp.src('./app/index.html')
+    return gulp.src('./app/temp/index2.html')
         .pipe(inlinesource(options))
+        .pipe(rename("index.html"))
         .pipe(gulp.dest('./app'));
 });
 
-gulp.task('prepareHtml', ['importHtml', 'inlinesource', 'deleteindexHtml']);
+gulp.task('prepareHtml', ['inlinesource', 'importHtml', 'deleteindexHtml']);
 
 gulp.task('deleteindexHtml', function () {
     return del("./app/index.html");

@@ -7,13 +7,11 @@
     background-image: linear-gradient(rgba(#000, 0.7), rgba(#000, 0.7)),
     url('../images/cup-of-coffee.jpg');
     overflow-x: hidden;
-    z-index: -9999;
 
     &__intro {
         position: absolute;
         left: 5%;
         bottom: 7%;
-        transition: opacity 1s ease-in;
 
         &.fadeOut {
             opacity: 0;
@@ -33,6 +31,7 @@
         "portrait") {
             width: 90%;
         }
+        
         @include media("portrait") {
             @include media("height>550px") {
                 font-size: rem(20);
@@ -51,6 +50,7 @@
                 font-size: rem(29);
             }
         }
+
         @include media("landscape") {
             @include media("height>650px") {
                 width: 100%;
