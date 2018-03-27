@@ -8,6 +8,6 @@ gulp.task('minifySVG', function () {
         .pipe(gulp.dest('./app/temp/icons_optim'));
 });
 
-gulp.task('grunticon', ['minifySVG'], function() {
+gulp.task('grunticon', function() {
     gulp.start('grunt-grunticon:myIcons')
 });

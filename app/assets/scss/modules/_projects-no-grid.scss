@@ -1,0 +1,65 @@
+.project {
+    &::after {
+        @extend .row:after;
+    }
+
+    &__info,
+    &__mockup {
+        width: 100%;
+        position: relative;
+
+        @include media("landscape") {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    &__info {
+        float: none;
+        bottom: -10%;
+
+        @include media(">370px") {
+            bottom: -19%;
+        }
+
+        @include media("landscape") {
+            float: left;
+            bottom: 0;
+        }
+    }
+
+    &__content {
+
+        @include media("landscape") {
+            top: center;
+            left: center;
+        }
+    }
+
+    &__mockup {
+        float: none;
+        height: 30%;
+        padding-top: 10%;
+
+        @include media("landscape") {
+            float: right;
+            height: 100%;
+        }
+    }
+
+    &__image {
+        @include media("landscape") {
+            top: center;
+            left: center;
+            transform: translate(-50%, -55%);
+        }
+    }
+
+    p {
+        @include media("landscape") {
+            font-size: responsive 12.5px 16px;
+            font-range: 801px 1500px;
+            width: 80%;
+        }
+    }
+}

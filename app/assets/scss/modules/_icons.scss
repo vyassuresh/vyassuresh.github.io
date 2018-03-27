@@ -43,19 +43,7 @@
     fill: #00C8FF;
 }
 
-.skill-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    grid-row-gap: 50px;
-    width: 90%;
-    margin: 0 auto;
-
-    @include media(">400px") {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include media(">650px") {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.icon-logo svg {
+    width: rem(100);
+    height: rem(30);
 }

@@ -1,0 +1,34 @@
+.section--skillset {
+    background-color: #eee;
+
+    .skill-container {
+        &::after {
+            @extend .row:after;
+        }
+
+        .skill {
+            float: left;
+            width: 50%;
+
+            &:nth-child(-n + 6) {
+                margin-bottom: rem(60);
+            }
+
+            @include media(">500px") {
+                width: 33.33%;
+            }
+
+            @include media(">medium") {
+                width: 25%;
+
+                &:nth-child(-n + 4) {
+                    margin-bottom: rem(80);
+                }
+
+                &:nth-child(n + 5) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

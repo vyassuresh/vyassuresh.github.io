@@ -9,6 +9,10 @@
 
 html {
     font-size: 12.5px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     @include media(">small") {
         font-size: 14px
@@ -21,6 +25,14 @@ html {
     @include media(">700px", "portrait") {
         font-size: 18px;
     }
+
+    @include media(">1800px") {
+        font-size: 20px;
+    }
+
+    @include media(">1900px") {
+        font-size: 20px;
+    }
 }
 
 body {
@@ -30,6 +42,7 @@ body {
     box-sizing: border-box;
     color: $gray;
     overflow-x: hidden;
+    background-color: #fff;
 }
 
 .red {
@@ -40,6 +53,27 @@ body {
     color: $mainBlue;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: $josefin;
+}
+
+em {
+    font-style: normal;
+}
+
+a.normal-link {
+    color: #5EA4F7;
+    text-decoration: none;
+    border-bottom: 1px dotted #5EA4F7;
+}
+
+.ie-only {
+    display: none;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
+    }
 }

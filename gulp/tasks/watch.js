@@ -11,8 +11,8 @@ gulp.task('watch', function() {
 		}
 	});
 
-	watch('./app/**/*.html', function() {
-        gulp.start('inlinesource');
+	watch(['./app/**/*.html', '!./app/index.html'], function() {
+		gulp.start('prepareHtml');
 		browserSync.reload();
 	});
 

@@ -11,6 +11,8 @@ module.exports = function(grunt) {
 					}],
 				options: {
 					loadersnippet: "grunticon.loader.js",
+					defaultWidth: "50px",
+					defaultHeight: "50px",
                     enhanceSVG: true
 				}
 			}

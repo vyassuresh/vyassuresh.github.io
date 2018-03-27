@@ -7,7 +7,7 @@
     background-image: linear-gradient(rgba(#000, 0.7), rgba(#000, 0.7)),
     url('../images/cup-of-coffee.jpg');
     overflow-x: hidden;
-    transition: height 999999s;
+    z-index: -9999;
 
     &__intro {
         position: absolute;

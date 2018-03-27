@@ -27,13 +27,14 @@
 } 
 
 .section {
-    padding: rem(80) 0; 
+    padding: rem(80) 0;
+    background-color: #fff;
 
     &--no-p-bottom {
         padding-bottom: 0;
     }
-    
-    &--skillset {
-        background-color: #eee;
+
+    &--no-padding {
+        padding: 0;
     }
 }

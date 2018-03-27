@@ -2,25 +2,33 @@ var gulp = require('gulp'),
 inlinesource = require('gulp-inline-source');
 rename = require('gulp-rename'),
 // imagemin = require('gulp-imagemin'),
-// del = require('del'),
+del = require('del'),
 // usemin = require('gulp-usemin'),
 // rev = require('gulp-rev'),
 // browserSync = require('browser-sync').create();
- 
-gulp.task('inlinesource', function () {
+htmlImport = require('gulp-html-import');
+
+gulp.task('importHtml', ['deleteindexHtml'], function () {
+    gulp.src('./app/main.html')
+        .pipe(htmlImport('./app/components/'))
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('./app'));
+})
+
+gulp.task('inlinesource', ['importHtml'], function () {
     var options = {
         compress: false
     };
- 
-    return gulp.src('./app/main.html')
+    return gulp.src('./app/index.html')
         .pipe(inlinesource(options))
-        .pipe(rename('index.html'))
         .pipe(gulp.dest('./app'));
 });
 
-// gulp.task('deleteDistFolder', ['inlinesource'], function () {
-//     return del("./dist");
-// });
+gulp.task('prepareHtml', ['importHtml', 'inlinesource', 'deleteindexHtml']);
+
+gulp.task('deleteindexHtml', function () {
+    return del("./app/index.html");
+});
 
 // gulp.task('copyGeneralFiles', ['deleteDistFolder'], function () {
 //     var pathsToCopy = [
