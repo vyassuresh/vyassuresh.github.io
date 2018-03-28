@@ -26,11 +26,11 @@ html {
         font-size: 18px;
     }
 
-    @include media(">1800px") {
-        font-size: 20px;
+    @include media(">1500px") {
+        font-size: 18px;
     }
 
-    @include media(">1900px") {
+    @include media(">1800px") {
         font-size: 20px;
     }
 }

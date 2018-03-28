@@ -3,19 +3,26 @@
         display: grid;
         grid-template-columns: 10% 1fr 10%;
         grid-template-rows: 0 1fr 2fr;
-        grid-template-areas: ". . ." ". mockup mockup" ". info .";
+        grid-template-areas: ". . ." "mockup mockup mockup" ". info .";
         grid-row-gap: 20px;
         padding-left: 0;
         padding-right: 0;
+        
 
-        @media (min-aspect-ratio: 4/3) {
+        @media (min-aspect-ratio: 3/3) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas: "info mockup" "info mockup";
-            grid-column-gap: rem(60);
             align-items: center;
             padding-left: 8%;
             padding-right: 8%;
+            grid-column-gap: rem(60);
+
+            &--dark {
+                @include media(">medium") {
+                    grid-column-gap: rem(90);
+                }
+            }
 
             &--dark {
                 grid-template-areas: "mockup info" "mockup info";
@@ -27,23 +34,86 @@
             grid-template-rows: auto auto 3fr 1fr;
             display: grid;
 
-            @include media("height<600px") {
+            @include media(">medium", "<1500px") {
+                @media (min-aspect-ratio: 16/9) {
+                    grid-template-rows: auto auto 2fr 1fr;
+                }
+            }
+
+            @include media("height<500px") {
                 grid-template-rows: auto auto 2fr 1fr;
             }
         }
 
         &__info {
             grid-area: info;
-            
+
             @include media("landscape") {
-                align-self: end;
+                align-self: center;
                 height: 90%;
+                max-height: 450px;
+
+                @include media(">medium") {
+                    align-self: end
+                }
+            }
+
+            @include media("height>1000px", "height<1400px", "width>1000px", "width<1400px", "landscape") {
+                // To target iPad pro landscape mode and similar devices having a box-like yet landscape container with huge height
+                align-self: center;
+                height: 65%
             }
         }
 
         &__mockup {
             grid-area: mockup;
             align-self: center;
+
+            @include media(">700px", "portrait") {
+                padding-top: 6%;
+            }
+        } // Styling for landscape smartphones
+        @include media("<700px", "landscape") {
+
+            & {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            &__link-container {
+                align-self: center;
+
+                @include media("<=600px") {
+                    font-size: 9px;
+                    position: absolute;
+                    bottom: 8%;
+                    right: 12%;
+                }
+            }
+
+            @include media("<=600px") {
+                &--dark .project__link-container {
+                    left: 12%
+                }
+            }
+
+            &__desc {
+                font-size: 10px;
+                width: 100%;
+                margin-top: 10px;
+
+                @include media("<=600px") {
+                    font-size: 9px;
+                }
+            }
+
+            &__info {
+                height: 98%;
+            }
+
+            .tags {
+                font-size: 60%;
+            }
         }
     }
 }

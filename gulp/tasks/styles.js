@@ -10,7 +10,9 @@ var gulp = require('gulp'),
     rucksack = require('rucksack-css'),
     postcssUnits = require('postcss-units'),
     postcssCenter = require('postcss-center'),
-    syntax_scss = require('postcss-scss');
+    syntax_scss = require('postcss-scss'),
+    colorblindPlugin = require("postcss-colorblind");
+
 
 gulp.task('styles', function() {
     var processors = [

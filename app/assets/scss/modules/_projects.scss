@@ -1,11 +1,11 @@
 .section--projects {
     height: 100vh;
-     width: 100%;
-     display: flex;
-     align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
 
     &__container {
-        height: 80vh;
+        height: 85vh;
         width: 63%;
         margin: 0 auto;
         overflow: hidden;
@@ -25,7 +25,6 @@
 
         @include media("portrait") {
             // Increase size on portrait
-            height: 80%;
             width: 90%;
         }
     }
@@ -42,7 +41,7 @@
         // This container controls the base font size because everything else is defined in ems inside this.
         @extend html; // get html's font settings
 
-        @include media("height<660px") {
+        @include media("height<570px") {
             font-size: 11px;
         }
 
@@ -54,10 +53,30 @@
         }
 
         &__desc {
-            width: 90%;
+            // width: 90%;
             align-self: center;
             hyphens: auto;
-            font-size: em(16);
+            font-size: responsive 11px 16.5px;
+            font-range: 300px 1500px;
+
+            @include media(">1500px") {
+                font-size: 1em
+            }
+
+            @include media("height>600px", ">=700px", "<1000px", "height<1000px") {
+
+                @include media(">800px") {
+                    font-size: 0.85em
+                }
+            }
+
+            @include media("height>800px", "height<1000px", "portrait") {
+                font-size: em(18)
+            }
+
+            @include media(">1000px", "portrait") {
+                font-size: 1.5em
+            }
         }
 
         &__image {
@@ -65,15 +84,38 @@
 
             @include media("portrait") {
                 max-width: 100%;
-                max-height: em(160);
+                max-height: 10em;
                 width: auto;
                 height: auto;
                 display: block;
                 margin: 0 auto;
 
-                @include media(">=600px", "portrait") {
-                    max-height: 250px;
-                    margin-bottom: rem(30);
+                @include media(">=600px") {
+                    max-height: 15em;
+                    margin-bottom: em(30);
+                }
+
+                @include media("height>=600px", ">=600px") {
+                    max-height: 10em;
+                    margin-bottom: 0;
+                }
+
+                @include media(">=700px", "height>=1000px") {
+                    max-height: 15em;
+                    margin-bottom: em(30);
+                }
+
+                @media (min-aspect-ratio: 4/3) {
+                    max-height: 15em;
+                    margin-bottom: em(30);
+                }
+
+                @include media(">1000px") {
+                    max-height: 20em;
+                }
+
+                @include media("height<500px", "<350px") {
+                    max-height: 9em;
                 }
             }
         }
@@ -90,7 +132,7 @@
         background-color: rgba(#7f8c8d, 0.8);
         color: #fff;
         border-radius: rem(5);
-        margin-right: 5px;
+        margin-right: em(5);
     }
 }
 
@@ -105,14 +147,14 @@
     color: #f7f7f7;
 }
 
-// @include target-ie {
-//     @import "projects-no-grid";
-// }
+@include target-ie {
+    @import "projects-no-grid";
+}
 
-// @supports not (display: grid) {
-//     @import "projects-no-grid";
-// }
+@supports not (display: grid) {
+    @import "projects-no-grid";
+}
 
-// @supports (display: grid) {
+@supports (display: grid) {
     @import "projects-grid.scss";
-// }
+}

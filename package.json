@@ -13,6 +13,7 @@
     "gulp-rev": "^8.1.1",
     "gulp-usemin": "^0.3.29",
     "jquery": "^3.3.1",
+    "postcss-colorblind": "^1.0.0",
     "postcss-scss": "^1.0.4",
     "rellax": "^1.6.0",
     "scrollmagic": "^2.0.5",
