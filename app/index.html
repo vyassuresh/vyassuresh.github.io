@@ -25,55 +25,61 @@ grunticon(["./temp/icons/icons.data.svg.css", "./temp/icons/icons.data.png.css",
 <body>
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     
-    <header class="header" data-rellax-speed="-4">
+    <header class="header">
 
-    <div class="navigation" aria-label="Main Navigation" role="navigation">
-
-        <div class="navigation__button">
-            <div class="navigation__icon"></div>
+    <div class="header__container">
+        <div class="navigation" aria-label="Main Navigation" role="navigation">
+        
+            <div class="navigation__button">
+                <div class="navigation__icon"></div>
+            </div>
+        
+            <div class="bg1"></div>
+        
+            <div class="logo-wrapper">
+                <a href="/" title="Home page" rel="">
+                    <h1 class="screen-reader-text">Suresh Vyas</h1>
+                    <h2 class="screen-reader-text">Web designer and front-end developer</h2>
+                    <span class="icon-logo" data-grunticon-embed></span>
+                </a>
+            </div>
+        
+            <nav class="navigation__nav">
+                <h1 class="screen-reader-text">Main menu</h1>
+                <ul class="navigation__list">
+                    <li>
+                        <a href="#" title="Websites created by Suresh Vyas">My projects</a>
+                    </li>
+                    <li>
+                        <a href="#" title="About Suresh Vyas">About me</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Get in touch with Suresh Vyas">Get it touch</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <div class="bg1"></div>
-
-        <div class="logo-wrapper">
-            <a href="/" title="Home page" rel="">            
-                <h1 class="screen-reader-text">Suresh Vyas</h1>
-                <h2 class="screen-reader-text">Web designer and front-end developer</h2>
-                <span class="icon-logo" data-grunticon-embed></span>
-            </a>
+        
+        <div class="header__intro">
+            <h1 class="heading-primary">Hello<span class="red">.</span>
+                <br /> I'm Sures<span class="blue">h</span>
+            </h1>
+        
+            <p class="header__intro-text">
+                <span class="red">A</span> front-end web developer who loves to design rich interactive site<span class="blue">s</span>.</p>
         </div>
-
-        <nav class="navigation__nav">
-            <h1 class="screen-reader-text">Main menu</h1>
-            <ul class="navigation__list">
-                <li>
-                    <a href="#" title="Websites created by Suresh Vyas">My projects</a>
-                </li>
-                <li>
-                    <a href="#" title="About Suresh Vyas">About me</a>
-                </li>
-                <li>
-                    <a href="#" title="Get in touch with Suresh Vyas">Get it touch</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="header__intro">
-        <h1 class="heading-primary">Hello<span class="red">.</span><br /> I'm Sures<span class="blue">h</span>
-        </h1>
-
-        <p class="header__intro-text"><span class="red">A</span> front-end web developer who loves to design rich interactive site<span class="blue">s</span>.</p>
     </div>
 </header>
     <main id="content">
 <section class="section section--expertise">
     <div class="wrapper wrapper--p-top u-center-text">
-        <h2 class="heading-secondary u-m-bottom-small">M<span class="red">y</span> Expertis<span class="blue">e</span>
-        </h2>
-        <p class="subheading">I am well specialized in all aspects of the design and development process.</p>
+        <div class="fadeItInBottom">
+            <h2 class="heading-secondary u-m-bottom-small">M<span class="red">y</span> Expertis<span class="blue">e</span>
+            </h2>
+            <p class="subheading">I am well specialized in all aspects of the design and development process.</p>
+        </div>
 
-        <div class="row u-m-top-v-large">
+        <div class="row u-m-top-v-large fadeItInLeft">
             <div class="row__4">
                 <div class="content-container">
                     <span class="icon-idea icon" data-grunticon-embed></span>
@@ -105,41 +111,42 @@ grunticon(["./temp/icons/icons.data.svg.css", "./temp/icons/icons.data.png.css",
     <section class="section section--skillset">
 
     <div class="wrapper wrapper--p-top u-center-text">
-        <h2 class="heading-secondary u-m-bottom-small">M<span class="red">y</span> Skillse<span class="blue">t</span>
-        </h2>
-        <p class="subheading u-m-bottom-v-large">I can efficiently work with
-            <em>all</em> the modern tools and techniques of a web developer.</p>
+        <div class="fadeItInBottom">
+            <h2 class="heading-secondary u-m-bottom-small">M<span class="red">y</span> Skillse<span class="blue">t</span>
+            </h2>
+            <p class="subheading u-m-bottom-v-large">I can efficiently work with <em>all</em> the modern tools and techniques of a web developer.</p>
+        </div>
 
         <div class="skill-container">
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-html5" data-grunticon-embed></div>
                 <h3>HTML5</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-css3" data-grunticon-embed></div>
                 <h3>CSS3</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-javascript" data-grunticon-embed></div>
                 <h3>Javascript</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-jquery" data-grunticon-embed></div>
                 <h3>Jquery</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-sass" data-grunticon-embed></div>
                 <h3>Sass</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-postcss" data-grunticon-embed></div>
                 <h3>Postcss</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-git" data-grunticon-embed></div>
                 <h3>Git</h3>
             </div>
-            <div class="skill">
+            <div class="skill zoomItIn">
                 <div class="icon-slider icon-photoshop" data-grunticon-embed></div>
                 <h3>Photoshop</h3>
             </div>
@@ -242,9 +249,21 @@ grunticon(["./temp/icons/icons.data.svg.css", "./temp/icons/icons.data.png.css",
     </div>
     </div>
 </section>
-
-<section class="section">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut quam similique excepturi, rem ipsum maiores dolores molestias aliquid voluptatibus! Mollitia architecto distinctio molestiae sapiente fugiat aliquam molestias unde id fugit.
+    <section class="section section--about-me">
+    <div class="wrapper">
+        <div class="u-center-text">
+            <h2 class="heading-secondary heading-secondary--light fadeItInBottom">S<span class="red">o</span>... Who Am <span class="blue">I</span>?</h2>
+        </div>
+        <div class="user-text u-m-top-large">
+            <div class="user-text__image-container fadeItInLeft">
+                <img src="./assets/images/suresh-vyas-face.jpg" alt="Picture of Suresh Vyas's face" class="user-text__image user-text__image--light" />
+            </div>
+            <div class="user-text__text user-text__text--light fadeItInRight">
+               <p>I’m Suresh Vyas, a web designer and front-end web developer in Indore (MP), India. I’ve always had an interest in computer science but my interest in web development peaked in around February 2018 and I started learning almost everything that caught my attention since then. Currently I’m playing around with advanced JS, learning more about UX and then thinking about gettng my hands on React or Vue (probably React).</p>
+                <p>And also... do I always keep my hair like that? Yeah, until they start to annoy me and I can't see the screen with my right eye. Then I shave them all :)</p>
+            </div>
+        </div>
+    </div>
 </section>
 
     </main>

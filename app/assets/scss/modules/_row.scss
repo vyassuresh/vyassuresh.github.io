@@ -6,7 +6,7 @@
     }
 
     @include media(">700px") {
-        >*:not(:first-child) {
+        > *:not(:first-child) {
             margin-left: $gutter-x;
         }
     }
@@ -29,6 +29,17 @@
 
         @include media("landscape") {
             width: calc((100% - (1 * #{$gutter-x})) / 2);
+            margin-bottom: 0;
+        }
+    }
+
+    &__8 {
+        float: left;
+        width: 100%;
+        margin-bottom: rem(60);
+
+        @include media("landscape") {
+            width: calc(2 * (100% - (2 * #{$gutter-x})) / 3); // m ultiplie d everything by 2 because it's 2 * width of row__4
             margin-bottom: 0;
         }
     }

@@ -30,6 +30,10 @@
     &--em {
         font-size: em(40);
     }
+
+    &--light {
+        color: $white;
+    }
 }
 
 .heading-tertiary {

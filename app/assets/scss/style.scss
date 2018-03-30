@@ -1,5 +1,6 @@
 @import 'base/variables';
 @import 'base/include-media';
+@import 'animate/animate';
 
 @import 'base/accessibility';
 @import 'base/global';
@@ -17,5 +18,6 @@
 @import 'modules/row';
 @import 'modules/navigation';
 @import 'modules/mobile-nav';
+@import 'modules/user-text';
 @import 'modules/footer';
 @import 'modules/icons';

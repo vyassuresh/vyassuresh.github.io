@@ -8,12 +8,12 @@
 }
 
 html {
-    font-size: 12.5px;
+    font-size: 12.7px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
+    
     @include media(">small") {
         font-size: 14px
     }

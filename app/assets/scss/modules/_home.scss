@@ -27,7 +27,7 @@
 } 
 
 .section {
-    padding: rem(80) 0;
+    padding: rem(90) 0;
     background-color: #fff;
 
     &--no-p-bottom {
@@ -36,5 +36,65 @@
 
     &--no-padding {
         padding: 0;
+    }
+
+    &--about-me {
+        background:
+        linear-gradient(rgba($black, 0.75), rgba($black, 0.75)), 
+        url('../images/flowers.jpg');
+        background-size: cover;
+    }
+}
+
+.fadeItInBottom {
+    opacity: 0;
+
+    &.fadeInDown {
+        @include fadeInDown(
+            $function: ease-in-out,
+            $duration: 0.7s
+        )
+    }
+}
+
+.fadeItInLeft {
+    opacity: 0;
+
+    &.fadeInLeft {
+        @include fadeInLeft(
+            $function: ease-in-out,
+            $duration: 0.7s
+        )
+    }
+}
+
+.fadeItInRight {
+    opacity: 0;
+
+    &.fadeInRight {
+        @include fadeInRight(
+            $function: ease-in-out,
+            $duration: 0.7s
+        )
+    }
+}
+
+.zoomItIn {
+    opacity: 0;
+
+    &.zoomIn {
+        opacity: 1;
+
+        @include zoomIn(
+            $function: ease-in-out,
+            $fill: both,
+            $duration: 0.3s
+        )
+
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{($i * 0.1)}s;
+            }
+        }
     }
 }
