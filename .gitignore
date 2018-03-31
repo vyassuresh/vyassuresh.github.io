@@ -4,3 +4,5 @@
 /bower_components/
 /node_modules/
 /.vscode/
+my.code-workspace
+app/temp/index2.html
