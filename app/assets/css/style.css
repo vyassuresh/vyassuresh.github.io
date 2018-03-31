@@ -2426,38 +2426,53 @@ a.normal-link {
   font-weight: 300;
   width: 90%;
   margin: 0 auto; }
+  .subheading--wide {
+    font-weight: 400; }
 
-#content {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: 1;
+.icon {
+  width: 3.125rem;
+  height: 3.125rem;
   display: block;
-  background-color: #fff; }
-
-.content-container {
-  width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto 25.008px auto;
+  margin: 0 auto 1.563rem auto;
+  fill: #3473db; }
   @media (min-width: 801px) {
-    .content-container {
-      padding: 0 1.25rem;
-      width: 100%;
-      margin: 0; } }
-  .content-container p {
-    font-size: 18px;
-    font-size: 1.125rem; }
-    @media (min-width: 701px) {
-      .content-container p {
-        font-size: 1rem; } }
+    .icon {
+      margin: 0 auto 0.938rem auto; } }
 
-.section {
-  padding: 90px 0;
-  padding: 5.625rem 0;
-  background-color: #fff; }
-  .section--no-p-bottom {
-    padding-bottom: 0; }
-  .section--no-padding {
-    padding: 0; }
+.icon-slider {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  margin: 0 auto 25.008px auto;
+  margin: 0 auto 1.563rem auto; }
+
+.icon-css3 {
+  fill: #1572B6; }
+
+.icon-html5 {
+  fill: #E34F26; }
+
+.icon-javascript {
+  fill: #F7DF1E; }
+
+.icon-jquery {
+  fill: #0769AD; }
+
+.icon-sass {
+  fill: #CC6699; }
+
+.icon-git {
+  fill: #F14E32; }
+
+.icon-photoshop {
+  fill: #00C8FF; }
+
+.icon-logo svg, .icon-logo2 svg {
+  width: 150px;
+  width: 9.375rem;
+  height: 45.008px;
+  height: 2.813rem; }
 
 .fadeItInBottom {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -2587,6 +2602,13 @@ a.normal-link {
 .btn--em {
   font-size: 1em; }
 
+.btn--uppercase:link, .btn--uppercase:visited {
+  text-transform: uppercase; }
+
+.btn--tall:link, .btn--tall:visited {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; }
+
 .row:after, .project:after, .section--skillset .skill-container:after, .user-text:after {
   content: '';
   display: table;
@@ -2625,6 +2647,272 @@ a.normal-link {
     .row__8 {
       width: 61.33333%;
       margin-bottom: 0; } }
+
+.wrapper {
+  max-width: 1140px;
+  max-width: 71.25rem;
+  margin: 0 auto; }
+
+#content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: block;
+  background-color: #fff; }
+
+.content-container {
+  width: 80%;
+  margin: 0 auto; }
+  @media (min-width: 801px) {
+    .content-container {
+      padding: 0 1.25rem;
+      width: 100%;
+      margin: 0; } }
+  .content-container p {
+    font-size: 18px;
+    font-size: 1.125rem; }
+    @media (min-width: 701px) {
+      .content-container p {
+        font-size: 1rem; } }
+
+.section {
+  padding: 90px 0;
+  padding: 5.625rem 0;
+  background-color: #fff; }
+  .section--no-p-bottom {
+    padding-bottom: 0; }
+  .section--no-padding {
+    padding: 0; }
+
+.header {
+  height: 100vh;
+  font-family: "Josefin Sans", "Lato", sans-serif;
+  overflow: hidden; }
+  .header__container {
+    height: 100%;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-320.jpeg"); }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
+      .header__container {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-320-2x.jpeg"); } }
+    @media (min-width: 751px) {
+      .header__container {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-750.jpeg"); } }
+  @media only screen and (min-width: 751px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 751px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 751px) and (min-resolution: 120dpi) {
+    .header__container {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-750-2x.jpeg"); } }
+    @media (min-width: 1201px) {
+      .header__container {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1200.jpeg"); } }
+  @media only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1201px) and (min-resolution: 120dpi) {
+    .header__container {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1200-2x.jpeg"); } }
+    @media (min-width: 1601px) {
+      .header__container {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1600.jpeg"); } }
+  @media only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1601px) and (min-resolution: 120dpi) {
+    .header__container {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1600-2x.jpeg"); } }
+    @media (min-width: 2001px) {
+      .header__container {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-2000.jpeg"); } }
+  @media only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 2001px) and (min-resolution: 120dpi) {
+    .header__container {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-2000-2x.jpeg"); } }
+  .header__intro {
+    position: absolute;
+    left: 5%;
+    bottom: 7%;
+    width: 100%; }
+    .header__intro.fadeOut {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      opacity: 0; }
+  .header__intro-text {
+    font-size: calc(11.28814px + 0.84746vw);
+    color: #e6e6e6;
+    width: 101%;
+    font-weight: 300;
+    padding-left: 1%; }
+  @media screen and (min-width: 1500px) {
+  .header__intro-text {
+    font-size: 24px; } }
+  @media screen and (max-width: 320px) {
+  .header__intro-text {
+    font-size: 14px; } }
+
+@media (max-width: 429px) and (orientation: portrait) {
+  .header__intro-text {
+    width: 90%; } }
+    @media (orientation: portrait) {
+      .header__intro-text {
+        margin-top: 2.5%; } }
+  @media (orientation: portrait) and (min-height: 551px) {
+    .header__intro-text {
+      font-size: 1.25rem;
+      width: 90%; } }
+  @media (orientation: portrait) and (min-height: 651px) {
+    .header__intro-text {
+      font-size: 1.438rem; } }
+  @media (orientation: portrait) and (min-height: 751px) {
+    .header__intro-text {
+      font-size: 1.625rem; } }
+  @media (orientation: portrait) and (min-height: 851px) {
+    .header__intro-text {
+      font-size: 1.813rem; } }
+
+@media (orientation: landscape) and (min-height: 651px) {
+  .header__intro-text {
+    width: 100%;
+    font-size: 1.438rem; } }
+
+@media (orientation: landscape) and (min-height: 751px) {
+  .header__intro-text {
+    font-size: 1.625rem; } }
+
+@media (orientation: landscape) and (min-height: 851px) {
+  .header__intro-text {
+    font-size: 1.813rem; } }
+
+/* To (probably partially) fix the buggy behaviour of IOS devices when using 100vh */
+.header {
+  /* iPad with portrait orientation. */
+  /* iPad with landscape orientation. */
+  /**
+ * iPhone 5 You can also target devices with aspect ratio. */ }
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .header {
+      height: 1024px; } }
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    .header {
+      height: 768px; } }
+  @media screen and (device-aspect-ratio: 40 / 71) {
+    .header {
+      height: 500px; } }
+
+@media (min-width: 701px) {
+  .navigation {
+    padding-top: 1.875rem;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto; }
+    .navigation .logo {
+      height: 30px; }
+    .navigation__nav {
+      margin-left: auto; }
+    .navigation__list {
+      list-style: none;
+      display: flex;
+      min-width: 21.25rem;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 100%;
+      align-items: center; }
+    .navigation a {
+      text-decoration: none;
+      color: #eee;
+      font-size: 110%; }
+      .navigation a:after {
+        margin-top: 10px;
+        content: '';
+        height: 2px;
+        width: 30px; } }
+
+@media (max-width: 699px) {
+  .navigation {
+    padding: 2.5rem 5% 0 5%; }
+    .navigation .logo {
+      height: 30px; }
+    .navigation__button {
+      border: 2px solid #eee;
+      width: 3.125rem;
+      height: 3.125rem;
+      position: absolute;
+      top: 1.875rem;
+      right: 5%;
+      border-radius: 50%;
+      z-index: 2000;
+      text-align: center;
+      cursor: pointer; }
+    .navigation__icon {
+      position: relative;
+      margin-top: 1.438rem; }
+      .navigation__icon, .navigation__icon:before, .navigation__icon:after {
+        width: 1.25rem;
+        height: 2px;
+        background-color: #f7f7f7;
+        display: inline-block; }
+      .navigation__icon:before, .navigation__icon:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        transition: all 0.2s; }
+      .navigation__icon:before {
+        top: -0.5rem; }
+      .navigation__icon:after {
+        top: 0.5rem; }
+      .navigation__icon--open {
+        background-color: transparent; }
+        .navigation__icon--open:before {
+          top: 0;
+          -webkit-transform: rotate(135deg);
+                  transform: rotate(135deg); }
+        .navigation__icon--open:after {
+          top: 0;
+          -webkit-transform: rotate(-135deg);
+                  transform: rotate(-135deg); }
+    .navigation__background {
+      width: 1.875rem;
+      height: 1.875rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 2.188rem;
+      right: 2.188rem;
+      background-image: radial-gradient(#3473db, #e74c3c);
+      z-index: 1000;
+      transition: -webkit-transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+    .navigation__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1500;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      opacity: 0;
+      width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .navigation__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      list-style-type: none;
+      text-align: center;
+      width: 100%; }
+      .navigation__list li {
+        margin: 0.625rem; }
+      .navigation__list a:link, .navigation__list a:visited {
+        display: inline-block;
+        font-size: 1.875rem;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0.625rem 1.25rem;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+        background-size: 250%;
+        transition: all 0.4s;
+        visibility: hidden; }
+      .navigation__list a:hover, .navigation__list a:active {
+        background-position: 100%;
+        color: #e74c3c;
+        -webkit-transform: translateX(0.625rem);
+                transform: translateX(0.625rem); } }
 
 .section--projects {
   height: 100vh;
@@ -2988,280 +3276,6 @@ a.normal-link {
         .section--skillset .skill-container .skill:nth-child(n + 5) {
           margin-bottom: 0; } }
 
-.header {
-  height: 100vh;
-  font-family: "Josefin Sans", "Lato", sans-serif;
-  overflow: hidden; }
-  .header__container {
-    height: 100%;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-320.jpeg"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
-      .header__container {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-320-2x.jpeg"); } }
-    @media (min-width: 751px) {
-      .header__container {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-750.jpeg"); } }
-  @media only screen and (min-width: 751px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 751px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 751px) and (min-resolution: 120dpi) {
-    .header__container {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-750-2x.jpeg"); } }
-    @media (min-width: 1201px) {
-      .header__container {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1200.jpeg"); } }
-  @media only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1201px) and (min-resolution: 120dpi) {
-    .header__container {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1200-2x.jpeg"); } }
-    @media (min-width: 1601px) {
-      .header__container {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1600.jpeg"); } }
-  @media only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1601px) and (min-resolution: 120dpi) {
-    .header__container {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-1600-2x.jpeg"); } }
-    @media (min-width: 2001px) {
-      .header__container {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-2000.jpeg"); } }
-  @media only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 2001px) and (min-resolution: 120dpi) {
-    .header__container {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/cup-of-coffee-2000-2x.jpeg"); } }
-  .header__intro {
-    position: absolute;
-    left: 5%;
-    bottom: 7%;
-    width: 100%; }
-    .header__intro.fadeOut {
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      opacity: 0; }
-  .header__intro-text {
-    font-size: calc(11.28814px + 0.84746vw);
-    color: #e6e6e6;
-    width: 101%;
-    font-weight: 300;
-    padding-left: 1%; }
-  @media screen and (min-width: 1500px) {
-  .header__intro-text {
-    font-size: 24px; } }
-  @media screen and (max-width: 320px) {
-  .header__intro-text {
-    font-size: 14px; } }
-
-@media (max-width: 429px) and (orientation: portrait) {
-  .header__intro-text {
-    width: 90%; } }
-    @media (orientation: portrait) {
-      .header__intro-text {
-        margin-top: 2.5%; } }
-  @media (orientation: portrait) and (min-height: 551px) {
-    .header__intro-text {
-      font-size: 1.25rem;
-      width: 90%; } }
-  @media (orientation: portrait) and (min-height: 651px) {
-    .header__intro-text {
-      font-size: 1.438rem; } }
-  @media (orientation: portrait) and (min-height: 751px) {
-    .header__intro-text {
-      font-size: 1.625rem; } }
-  @media (orientation: portrait) and (min-height: 851px) {
-    .header__intro-text {
-      font-size: 1.813rem; } }
-
-@media (orientation: landscape) and (min-height: 651px) {
-  .header__intro-text {
-    width: 100%;
-    font-size: 1.438rem; } }
-
-@media (orientation: landscape) and (min-height: 751px) {
-  .header__intro-text {
-    font-size: 1.625rem; } }
-
-@media (orientation: landscape) and (min-height: 851px) {
-  .header__intro-text {
-    font-size: 1.813rem; } }
-
-/* To (probably partially) fix the buggy behaviour of IOS devices when using 100vh */
-.header {
-  /* iPad with portrait orientation. */
-  /* iPad with landscape orientation. */
-  /**
- * iPhone 5 You can also target devices with aspect ratio. */ }
-  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-    .header {
-      height: 1024px; } }
-  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
-    .header {
-      height: 768px; } }
-  @media screen and (device-aspect-ratio: 40 / 71) {
-    .header {
-      height: 500px; } }
-
-.wrapper {
-  max-width: 1140px;
-  max-width: 71.25rem;
-  margin: 0 auto; }
-
-.row:after, .project:after, .section--skillset .skill-container:after, .user-text:after {
-  content: '';
-  display: table;
-  clear: both; }
-
-@media (min-width: 701px) {
-  .row > *:not(:first-child) {
-    margin-left: 4%; } }
-
-.row__4 {
-  float: left;
-  width: 100%;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem; }
-  @media (min-width: 701px) {
-    .row__4 {
-      width: 30.66667%;
-      margin-bottom: 0; } }
-
-.row__6 {
-  float: left;
-  width: 100%;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem; }
-  @media (orientation: landscape) {
-    .row__6 {
-      width: 48%;
-      margin-bottom: 0; } }
-
-.row__8 {
-  float: left;
-  width: 100%;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem; }
-  @media (orientation: landscape) {
-    .row__8 {
-      width: 61.33333%;
-      margin-bottom: 0; } }
-
-@media (min-width: 701px) {
-  .navigation {
-    padding-top: 2.5rem;
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto; }
-    .navigation .logo {
-      height: 30px; }
-    .navigation__nav {
-      margin-left: auto; }
-    .navigation__list {
-      list-style: none;
-      display: flex;
-      min-width: 21.25rem;
-      justify-content: space-between;
-      flex-direction: row; }
-      .navigation__list li {
-        margin-bottom: 2.5rem; }
-    .navigation a {
-      text-decoration: none;
-      color: #eee;
-      font-size: 110%; }
-      .navigation a:after {
-        margin-top: 10px;
-        content: '';
-        height: 2px;
-        width: 30px; } }
-
-@media (max-width: 699px) {
-  .navigation {
-    padding: 2.5rem 5% 0 5%; }
-    .navigation .logo {
-      height: 30px; }
-    .navigation__button {
-      border: 2px solid #eee;
-      width: 3.125rem;
-      height: 3.125rem;
-      position: absolute;
-      top: 1.875rem;
-      right: 5%;
-      border-radius: 50%;
-      z-index: 2000;
-      text-align: center;
-      cursor: pointer; }
-    .navigation__icon {
-      position: relative;
-      margin-top: 1.438rem; }
-      .navigation__icon, .navigation__icon:before, .navigation__icon:after {
-        width: 1.25rem;
-        height: 2px;
-        background-color: #f7f7f7;
-        display: inline-block; }
-      .navigation__icon:before, .navigation__icon:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        transition: all 0.2s; }
-      .navigation__icon:before {
-        top: -0.5rem; }
-      .navigation__icon:after {
-        top: 0.5rem; }
-      .navigation__icon--open {
-        background-color: transparent; }
-        .navigation__icon--open:before {
-          top: 0;
-          -webkit-transform: rotate(135deg);
-                  transform: rotate(135deg); }
-        .navigation__icon--open:after {
-          top: 0;
-          -webkit-transform: rotate(-135deg);
-                  transform: rotate(-135deg); }
-    .navigation__background {
-      width: 1.875rem;
-      height: 1.875rem;
-      border-radius: 50%;
-      position: fixed;
-      top: 2.188rem;
-      right: 2.188rem;
-      background-image: radial-gradient(#3473db, #e74c3c);
-      z-index: 1000;
-      transition: -webkit-transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-      transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-      transition: transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-    .navigation__nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1500;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      opacity: 0;
-      width: 0;
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-    .navigation__list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      list-style-type: none;
-      text-align: center;
-      width: 100%; }
-      .navigation__list li {
-        margin: 0.625rem; }
-      .navigation__list a:link, .navigation__list a:visited {
-        display: inline-block;
-        font-size: 1.875rem;
-        font-weight: 300;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 0.625rem 1.25rem;
-        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-        background-size: 250%;
-        transition: all 0.4s;
-        visibility: hidden; }
-      .navigation__list a:hover, .navigation__list a:active {
-        background-position: 100%;
-        color: #e74c3c;
-        -webkit-transform: translateX(0.625rem);
-                transform: translateX(0.625rem); } }
-
 .section--about-me {
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-320.jpeg"); }
@@ -3276,22 +3290,22 @@ a.normal-link {
       background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-750-2x.jpeg"); } }
   @media (min-width: 1201px) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-1200.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-1200.jpeg"); } }
   @media only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1201px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1201px) and (min-resolution: 120dpi) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-1200-2x.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-1200-2x.jpeg"); } }
   @media (min-width: 1601px) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-1600.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-1600.jpeg"); } }
   @media only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 1601px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 1601px) and (min-resolution: 120dpi) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-1600-2x.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-1600-2x.jpeg"); } }
   @media (min-width: 2001px) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-2000.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-2000.jpeg"); } }
   @media only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 2001px) and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-width: 2001px) and (min-resolution: 120dpi) {
     .section--about-me {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/flowers-2000-2x.jpeg"); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/flowers-2000-2x.jpeg"); } }
 
 .user-text {
   width: 90%;
@@ -3323,47 +3337,16 @@ a.normal-link {
     .user-text__text--light {
       color: #e6e6e6; }
 
-.icon {
-  width: 3.125rem;
-  height: 3.125rem;
-  display: block;
-  margin: 0 auto 25.008px auto;
-  margin: 0 auto 1.563rem auto;
-  fill: #3473db; }
-  @media (min-width: 801px) {
-    .icon {
-      margin: 0 auto 0.938rem auto; } }
-
-.icon-slider {
-  width: 5rem;
-  height: 5rem;
-  display: block;
-  margin: 0 auto 25.008px auto;
-  margin: 0 auto 1.563rem auto; }
-
-.icon-css3 {
-  fill: #1572B6; }
-
-.icon-html5 {
-  fill: #E34F26; }
-
-.icon-javascript {
-  fill: #F7DF1E; }
-
-.icon-jquery {
-  fill: #0769AD; }
-
-.icon-sass {
-  fill: #CC6699; }
-
-.icon-git {
-  fill: #F14E32; }
-
-.icon-photoshop {
-  fill: #00C8FF; }
-
-.icon-logo svg {
-  width: 100px;
-  width: 6.25rem;
-  height: 30px;
-  height: 1.875rem; }
+.footer {
+  padding: 70px 0;
+  padding: 4.375rem 0;
+  background-color: #333;
+  color: #f7f7f7; }
+  .footer__text {
+    font-size: 90%;
+    color: #777; }
+  .footer__logo svg {
+    width: 100px;
+    width: 6.25rem;
+    height: 45.008px;
+    height: 2.813rem; }

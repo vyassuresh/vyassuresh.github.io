@@ -1,0 +1,16 @@
+.footer {
+    padding: rem(70) 0;
+    background-color: #333;
+    color: $white-ish;
+
+    &__text {
+        font-size: 90%;
+        color: $gray;
+    }
+
+    &__logo svg {
+        width: rem(100);
+        height: rem(45);
+    }
+}
+
