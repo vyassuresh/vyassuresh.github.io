@@ -4,3 +4,4 @@ require('./gulp/tasks/scripts');
 require('./gulp/tasks/build');
 require('./gulp/tasks/svg');
 require('./gulp/tasks/resizeImages');
+require('./gulp/tasks/prepareHtml');

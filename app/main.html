@@ -8,13 +8,15 @@
     <title>Suresh Vyas - Web designer &amp; front-end developer</title>
     <meta name="description" content="Suresh Vyas is a front end web developer who designs and develops modern, mobile-first, interactive and accessible websites using the latest tools and techniques." />
 
-    <!-- build:css assets/css/style.css -->
+    <!-- build:css ./assets/css/style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- endbuild -->
 
+    <!-- double dot in src for inline coz it is in temp folder when it gets inlined-->
     <script src="../assets/scripts/modules/grunticon.loader.js" inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.2/lazysizes.min.js"></script>
     <noscript>
-        <link href="temp/icons/icons.fallback.css" rel="stylesheet">
+        <link href="./assets/icons/icons.fallback.css" rel="stylesheet">
     </noscript>
 </head>
 
@@ -29,3 +31,14 @@
     @import "_get-in-touch.html"
     @import "_footer.html"
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+
+<!-- build:js ./assets/scripts/App.js-->
+<script src="temp/scripts/App.js"></script>
+<!-- endbuild -->
+</body>
+
+</html>

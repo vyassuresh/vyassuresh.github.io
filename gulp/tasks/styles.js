@@ -19,7 +19,8 @@ gulp.task('styles', function() {
         postcssCenter,
         autoprefixer,
         fixes,
-        postcssSize
+        postcssSize,
+        cssnano
     ];
     return gulp.src('./app/assets/scss/style.scss')
         .pipe(sass().on('error', sass.logError))
