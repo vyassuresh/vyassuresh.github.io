@@ -44,6 +44,16 @@
                 url('../images/cup-of-coffee-1600-2x.jpeg');
             }
         }
+
+        @include media(">2000px") {
+            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+            url('../images/cup-of-coffee-2000.jpeg');
+
+            @include target-retina {
+                background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+                url('../images/cup-of-coffee-2000-2x.jpeg');
+            }
+        }
     }
 
     &__intro {

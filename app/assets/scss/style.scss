@@ -8,16 +8,18 @@
 @import 'base/utilities';
 @import 'base/typography';
 
-@import 'modules/home';
+
+@import 'modules/icons';
+@import 'modules/animations';
 @import 'modules/btn';
-@import 'modules/row'; 
-@import 'modules/projects'; 
-@import 'modules/skills';
-@import 'modules/header';
-@import 'modules/wrapper';
 @import 'modules/row';
+@import 'modules/wrapper';
+
+@import 'modules/home';
+@import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/mobile-nav';
+@import 'modules/projects'; 
+@import 'modules/skills';
 @import 'modules/about-me';
 @import 'modules/footer';
-@import 'modules/icons';

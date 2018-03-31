@@ -9,6 +9,7 @@
         transition: all 0.3s;
         color: #333;
     }
+
     &:hover,
     &:focus {
         background-color: $mainRed;
@@ -33,5 +34,16 @@
 
     &--em {
         font-size: 1em;
+    }
+
+    &--uppercase:link,
+    &--uppercase:visited {
+        text-transform: uppercase;
+    }
+
+    &--tall:link, 
+    &--tall:visited {
+        padding-top: em(12);
+        padding-bottom: em(12);
     }
 }
