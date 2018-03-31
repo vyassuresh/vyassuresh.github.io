@@ -2,9 +2,6 @@
   "name": "vyas-suresh",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "stylelint": "stylelint 'app/assets/scss/**/*.scss'"
-  },
   "dependencies": {
     "grunt": "^1.0.2",
     "gsap": "^1.20.4",
@@ -26,9 +23,11 @@
     "gulp-grunt": "^0.5.5",
     "gulp-hash-references": "^1.0.3",
     "gulp-html-import": "0.0.2",
+    "gulp-image-resize": "^0.13.0",
     "gulp-inline-source": "^3.1.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-responsive-images": "0.0.3",
     "gulp-sass": "^3.2.0",
     "gulp-svg-sprite": "^1.3.7",
     "gulp-svgmin": "^1.2.4",

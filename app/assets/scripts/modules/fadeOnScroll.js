@@ -58,7 +58,6 @@ var fadeOnScroll = (function() {
                 reverse: false
             })
             .setClassToggle(".zoomItIn", "zoomIn")
-            .addIndicators()
             .addTo(controller);
     }
 

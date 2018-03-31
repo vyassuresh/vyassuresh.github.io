@@ -8,7 +8,42 @@
         height: 100%;
         background-size: cover;
         background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-        url('../images/cup-of-coffee.jpg');
+        url('../images/cup-of-coffee-320.jpeg');
+
+        @include target-retina {
+            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+            url('../images/cup-of-coffee-320-2x.jpeg');
+        }
+
+        @include media(">750px") {
+            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+            url('../images/cup-of-coffee-750.jpeg');
+
+            @include target-retina {
+                background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+                url('../images/cup-of-coffee-750-2x.jpeg');
+            }
+        }
+
+        @include media(">1200px") {
+            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+            url('../images/cup-of-coffee-1200.jpeg');
+
+            @include target-retina {
+                background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+                url('../images/cup-of-coffee-1200-2x.jpeg');
+            }
+        }
+
+        @include media(">1600px") {
+            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+            url('../images/cup-of-coffee-1600.jpeg');
+
+            @include target-retina {
+                background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
+                url('../images/cup-of-coffee-1600-2x.jpeg');
+            }
+        }
     }
 
     &__intro {
