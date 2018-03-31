@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 imageResize = require('gulp-image-resize'),
 rename = require('gulp-rename'),
-imagemin = require('gulp-imagemin');
+imageop = require('gulp-image-optimization');
 
 gulp.task('resizeImages', function() {
     return gulp.src('app/assets/images/cup-of-coffee.jpg')
@@ -17,25 +17,21 @@ gulp.task('resizeImages', function() {
 
 var resizeImageTasks = [];
 
-[320, 750, 1200, 1600].forEach(function (size) {
+[320, 750, 1200, 1600, 2000].forEach(function (size) {
     var resizeImageTask = 'resize_' + size;
 
-    gulp.task(resizeImageTask, function () {
-        return gulp.src('app/assets/images/flowers.jpg')
-            .pipe(imageResize({
-                width: size*2,
-                quality: 75,
-                format: 'jpeg'
-            }))
-            .pipe(imagemin([
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.jpegtran({ progressive: true }),
-                imagemin.optipng({ optimizationLevel: 5 })
-            ]))
-            .pipe(rename(function (path) { path.basename += '-' + size + '-2x'; }))
-            .pipe(gulp.dest('app/assets/images'));
-    });
-    resizeImageTasks.push(resizeImageTask);
+        gulp.task(resizeImageTask, function () {
+            return gulp.src(['app/assets/images/flowers.jpg', 'app/assets/images/cup-of-coffee.jpg'])
+                .pipe(imageResize({
+                    width: size*2,
+                    quality: 70,
+                    format: 'jpeg'
+                }))
+                .pipe(rename(function (path) { path.basename += '-' + size + '-2x'}))
+                .pipe(gulp.dest('app/assets/images'));
+
+        });
+        resizeImageTasks.push(resizeImageTask);
 });
 
 gulp.task('resize_images', resizeImageTasks);
