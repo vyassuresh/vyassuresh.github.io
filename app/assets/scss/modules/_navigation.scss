@@ -25,16 +25,18 @@
         }
 
         a {
-            text-decoration: none;
-            color: #eee;
-            font-size: 110%;
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: #eee;
+                font-size: 110%;
+                transition: all 0.2s;
+            }
 
-            &::after {
-                // for a border bottom animation on hover
-                margin-top: 10px;
-                content: '';
-                height: 2px;
-                width: 30px;
+            &:hover,
+            &:focus {
+
+                opacity: 0.6;
             }
         }
     }

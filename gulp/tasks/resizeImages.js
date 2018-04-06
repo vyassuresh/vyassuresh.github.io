@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
 imageResize = require('gulp-image-resize'),
-rename = require('gulp-rename'),
-imageop = require('gulp-image-optimization');
+rename = require('gulp-rename');
 
 gulp.task('resizeImages', function() {
     return gulp.src('app/assets/images/cup-of-coffee.jpg')

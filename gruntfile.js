@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'app/temp/icons_optim',
 						src: ['*.svg', '*.png'],
-						dest: "app/temp/icons"
+						dest: "app/assets/icons"
 					}],
 				options: {
 					loadersnippet: "grunticon.loader.js",

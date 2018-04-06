@@ -7,6 +7,7 @@ rev = require('gulp-rev'),
 imagemin = require('gulp-imagemin'),
 browserSync = require('browser-sync').create();
 htmlImport = require('gulp-html-import'),
+postcss = require('gulp-postcss'),
 uglify = require('gulp-uglify'),
 require('gulp-grunt')(gulp);
 
@@ -42,15 +43,23 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function () {
         .pipe(gulp.dest("./dist"));
 });
 
-gulp.task('copyGruntIcons', ['deleteDistFolder'], function () {
-    return gulp.src(['./app/temp/icons/**/*', '!./app/temp/icons/grunticon.loader.js', '!./app/temp/icons/preview.html'])
+gulp.task('copyGruntIcons:icons', ['deleteDistFolder'], function () {
+    return gulp.src('./app/temp/icons/**/*.png')
         .pipe(imagemin({
             progressive: true,
             interlaced: true,
             multipass: true
         }))
+        .pipe(gulp.dest("./dist/assets/icons/png"));
+});
+
+gulp.task('copyGruntIcons:css', ['deleteDistFolder'], function () {
+    return gulp.src('./app/temp/icons/**/*.css')
+        .pipe(postcss(require('cssnano')))
         .pipe(gulp.dest("./dist/assets/icons"));
 });
+
+gulp.task('copyGruntIcons', ['deleteDistFolder', 'copyGruntIcons:css', 'copyGruntIcons:icons']);
 
 gulp.task('optimizeImages', ['deleteDistFolder', 'grunt-grunticon:myIcons'], function () {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
