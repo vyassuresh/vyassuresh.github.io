@@ -1,11 +1,11 @@
-var fixChromeAndroid = require('./modules/fixChromeAndroid.js');
+var browserHacks = require('./modules/browserHacks.js');
 var fadeOnScroll = require('./modules/fadeOnScroll.js');
 var mobileMenu = require('./modules/mobileMenu.js');
 var projectSlider = require('./modules/projectSlider.js');
 var parallax = require('./modules/parallax.js');
 var smoothScrolling = require('./modules/smoothScrolling.js');
 
-fixChromeAndroid();
+browserHacks();
 fadeOnScroll();
 mobileMenu();
 projectSlider();
