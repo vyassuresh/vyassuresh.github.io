@@ -44,7 +44,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function () {
 });
 
 gulp.task('copyGruntIcons:icons', ['deleteDistFolder'], function () {
-    return gulp.src('./app/temp/icons/**/*.png')
+    return gulp.src('./app/assets/icons/**/*.png')
         .pipe(imagemin({
             progressive: true,
             interlaced: true,
@@ -54,7 +54,7 @@ gulp.task('copyGruntIcons:icons', ['deleteDistFolder'], function () {
 });
 
 gulp.task('copyGruntIcons:css', ['deleteDistFolder'], function () {
-    return gulp.src('./app/temp/icons/**/*.css')
+    return gulp.src('./app/assets/icons/**/*.css')
         .pipe(postcss(require('cssnano')))
         .pipe(gulp.dest("./dist/assets/icons"));
 });
