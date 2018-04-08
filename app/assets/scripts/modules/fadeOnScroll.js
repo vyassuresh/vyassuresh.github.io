@@ -1,3 +1,5 @@
+/*global ScrollMagic, TweenMax, Power0, document, module */
+
 var fadeOnScroll = (function() {
 
     var controller = new ScrollMagic.Controller();
@@ -18,67 +20,45 @@ var fadeOnScroll = (function() {
             .addTo(controller)
     }
 
-    function fadeInHeading() {
-
-        var fadeItInBottom = document.querySelectorAll('.fadeItInBottom');
-
-        for (var i = 0; i < fadeItInBottom.length; i++) {
-
-            new ScrollMagic.Scene({
-                    triggerElement: fadeItInBottom[i],
-                    triggerHook: "0.8",
-                    reverse: false
-                })
-                .setClassToggle(fadeItInBottom[i], "fadeInDown")
-                .addTo(controller);
-
-        }
-    }
-
-    function fadeInLeft() {
-
-        var fadeItInLeft = document.querySelectorAll('.fadeItInLeft');
-
-        for (var i = 0; i < fadeItInLeft.length; i++) {
-            new ScrollMagic.Scene({
-                    triggerElement: fadeItInLeft[i],
-                    triggerHook: "0.7",
-                    reverse: false
-                })
-                .setClassToggle(fadeItInLeft[i], "fadeInLeft")
-                .addTo(controller);
-        }
-    }
-
     function zoomIn() {
 
         new ScrollMagic.Scene({
-                triggerElement: '.skill-container',
-                triggerHook: "0.6",
-                reverse: false
-            })
+            triggerElement: '.skill-container',
+            triggerHook: "0.6",
+            reverse: false
+        })
             .setClassToggle(".zoomItIn", "zoomIn")
             .addTo(controller);
     }
 
-    function fadeInRight() {
-        var fadeItInRight = document.querySelectorAll('.fadeItInRight');
+    // Function to make scenes for similar elements
+    function makeScene(selectorClass, hook) {
 
-        for (var i = 0; i < fadeItInRight.length; i++) {
-            new ScrollMagic.Scene({
-                    triggerElement: fadeItInRight[i],
-                    triggerHook: "0.7",
+        return function() {
+            var animationClass = selectorClass.replace('It', '');
+
+            var selectorArr = document.querySelectorAll('.' + selectorClass);
+
+            for (var i = 0; i < selectorArr.length; i++) {
+                new ScrollMagic.Scene({
+                    triggerElement: selectorArr[i],
+                    triggerHook: hook,
                     reverse: false
                 })
-                .setClassToggle(fadeItInRight[i], "fadeInRight")
-                .addTo(controller);
+                    .setClassToggle(selectorArr[i], animationClass)
+                    .addTo(controller);
+            }
         }
-    }
+    } 
 
-    fadeOutIntro();
-    fadeInHeading();
-    fadeInLeft();
+    var fadeInHeading = makeScene('fadeItInBottom', 0.8);
+    var fadeInLeft = makeScene('fadeItInLeft', 0.7);
+    var fadeInRight = makeScene('fadeItInRight', 0.7);
+
     fadeInRight();
+    fadeInLeft();
+    fadeInHeading();
+    fadeOutIntro();
     zoomIn();
 });
 

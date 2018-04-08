@@ -1,7 +1,7 @@
 .fadeItInBottom {
     opacity: 0;
 
-    &.fadeInDown {
+    &.fadeInBottom {
         @include fadeInDown( $function: ease-in-out,
         $duration: 0.7s)
     }

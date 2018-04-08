@@ -3,11 +3,10 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     sass = require('gulp-sass'),
     autoprefixer = require('autoprefixer'),
-    fixes = require('postcss-fixes'),
     cssnano = require('cssnano'),
     rucksack = require('rucksack-css'),
     postcssUnits = require('postcss-units'),
-    postcssSize = require('postcss-size');
+    postcssSize = require('postcss-size'),
     postcssCenter = require('postcss-center');
 
 gulp.task('styles', function() {
@@ -18,7 +17,6 @@ gulp.task('styles', function() {
         }),
         postcssCenter,
         autoprefixer,
-        fixes,
         postcssSize,
         cssnano
     ];
