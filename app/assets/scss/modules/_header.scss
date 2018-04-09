@@ -69,10 +69,11 @@
     }
 
     &__intro-text {
-        font-size: responsive 14px 24px;
+        font-size: responsive 14px 23px;
         font-range: 320px 1500px;
         color: darken($white, 10%);
         width: 101%;
+        font-family: 'Lato', sans-serif;
         font-weight: 300;
         padding-left: 1%;
 
