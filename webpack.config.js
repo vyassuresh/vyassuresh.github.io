@@ -21,5 +21,5 @@ module.exports = {
             exclude: /node_modules/
         }]
     },
-    mode: 'production'
+    mode: 'development'
 }

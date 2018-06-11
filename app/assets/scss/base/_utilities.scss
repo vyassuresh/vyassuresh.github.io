@@ -8,7 +8,11 @@
     }
 
     &-large {
-        margin-bottom: rem(60) !important;
+        margin-bottom: rem(40) !important;
+
+        @include media(">medium") {
+            margin-bottom: rem(60) !important;
+        }
     }
     &-medium {
         margin-bottom: rem(20) !important;
@@ -36,7 +40,7 @@
         } 
     } 
     &-large {
-        margin-top: rem(60) !important
+        margin-top: rem(60) !important;
     }
     &-medium {
         margin-top: rem(20) !important;

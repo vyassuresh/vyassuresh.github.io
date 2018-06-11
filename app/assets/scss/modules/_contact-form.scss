@@ -1,0 +1,159 @@
+.contact {
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white-ish;
+    font-family: 'Lato';
+    background-color: #333;
+    font-size: rem(20);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+
+    &--is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    &__close {
+        position: absolute;
+        top: 3%;
+        right: 4%;
+        opacity: 0.3;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        @include media(">medium") {
+            top: 10%;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto) 100px;
+    grid-template-areas: "name" "email" "msg" "submit";
+
+    @include media(">medium") {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas : "name msg" "email msg" "submit submit";
+    }
+
+    &__name {
+        grid-area: name;
+    }
+
+    &__email {
+        grid-area: email;
+    }
+
+    &__message {
+        grid-area: msg;
+    }
+
+    &__input {
+        margin-top: rem(8);
+        display: block;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+        padding-left: 10px;
+        color: $white-ish;
+        font-size: rem(16);
+        height: rem(50);
+        margin-bottom: rem(50);
+        font-family: $josefin;
+        transition: border-bottom 0.2s;
+        width: 100%;
+
+        @include media(">medium") {
+            width: 85%;
+        }
+
+        &:focus:invalid {
+            border-bottom: 1px solid $mainRed;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIi8+PGcgY2xhc3M9ImN1cnJlbnRMYXllciIgc3R5bGU9IiI+PHRpdGxlPkxheWVyIDE8L3RpdGxlPjxwYXRoIGQ9Ik0xMiAxMS4yOTNsMTAuMjkzLTEwLjI5My43MDcuNzA3LTEwLjI5MyAxMC4yOTMgMTAuMjkzIDEwLjI5My0uNzA3LjcwNy0xMC4yOTMtMTAuMjkzLTEwLjI5MyAxMC4yOTMtLjcwNy0uNzA3IDEwLjI5My0xMC4yOTMtMTAuMjkzLTEwLjI5My43MDctLjcwNyAxMC4yOTMgMTAuMjkzeiIgaWQ9InN2Z18xIiBjbGFzcz0ic2VsZWN0ZWQiIGZpbGwtb3BhY2l0eT0iMSIgZmlsbD0iI2U3NGMzYyIvPjwvZz48L3N2Zz4=);
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+
+        }
+
+        &:valid {
+            border-bottom: 1px solid $green;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIi8+PGcgY2xhc3M9ImN1cnJlbnRMYXllciIgc3R5bGU9IiI+PHRpdGxlPkxheWVyIDE8L3RpdGxlPjxwYXRoIGQ9Ik0yNCwwLjY4NDk5OTk0Mjc3OTU0MSBsLTE2LjMyNjk5OTY2NDMwNjY0LDE3LjMxNTAwMDUzNDA1NzYxNyBsLTcuNjcyOTk5ODU4ODU2MjAxLC05LjA1Mzk5OTkwMDgxNzg3MSBsMC43NjA5OTk5Nzc1ODg2NTM2LC0wLjY0ODAwMDAwMTkwNzM0ODYgbDYuOTQ5OTk5ODA5MjY1MTM3LDguMjAzMDAwMDY4NjY0NTUgbDE1LjU2MDk5OTg3MDMwMDI5MywtMTYuNTAwOTk5NDUwNjgzNTk0IGwwLjcyNzk5OTk4NTIxODA0ODEsMC42ODUwMDAwMDIzODQxODU4IHoiIGlkPSJzdmdfMSIgY2xhc3M9InNlbGVjdGVkIiBmaWxsLW9wYWNpdHk9IjEiIGZpbGw9IiM1NWM1ODciLz48L2c+PC9zdmc+);
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+        }
+
+        &:invalid {
+            box-shadow: none;
+        }
+    }
+
+    &__textarea {
+        height: 70%;
+        width: 100%;
+    }
+
+    &__submit {
+        grid-area: submit;
+        align-self: center;
+        justify-self: center;
+        text-decoration: none;
+        padding: em(10) em(40);
+        border: 2px solid $mainRed;
+        border-radius: 100px;
+        display: inline-block;
+        transition: all 0.3s;
+        color: $white-ish;
+        background-color: $mainRed;
+        cursor: pointer;
+        font-size: rem(18);
+
+        @include media("<medium") {
+            margin-top: rem(70);
+        }
+
+        &:hover {
+            background-color: $mainRedDark;
+            border: 2px solid $mainRedDark;
+            padding: em(10) em(46);
+        }
+    }
+
+    &__label {
+        font-size: rem(14);
+        margin-bottom: rem(10);
+        margin-left: rem(10);
+        font-weight: 400;
+        transition: all 0.2s;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        font-family: $josefin;
+        transform: translateY(rem(40));
+    }
+
+    &__label.is-visible {
+        transition: all 0.2s;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}

@@ -1,6 +1,6 @@
 var projectSlider = (function() {
     var controller = new ScrollMagic.Controller();
-
+    
     // define movement of panels
     var wipeAnimation = new TimelineMax()
         .fromTo(".project.project1", 1, {

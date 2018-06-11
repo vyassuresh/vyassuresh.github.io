@@ -2,7 +2,7 @@
     font-weight: 900;
     color: #fff;
     line-height: 1.2;
-    font-size: responsive 60px 134px;
+    font-size: responsive 53px 125px;
     font-range: 320px 1500px;
     opacity: 1;
 
@@ -32,7 +32,7 @@
     }
 
     &--light {
-        color: $white;
+        color: $white-ish;
     }
 }
 
@@ -43,6 +43,17 @@
     letter-spacing: .5px;
     word-spacing: 1px;
     margin-bottom: rem(20);
+}
+
+.heading-lato {
+    font-size: responsive 20px 40px;
+    font-range: 320px 1500px;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    font-family: 'Lato';
+    font-weight: 300;
+    color: $white-ish;
+
 }
 
 .subheading {

@@ -1,7 +1,7 @@
 <section class="section section--get-in-touch" id="get-in-touch">
     <div class="wrapper u-center-text">
         <div class="fadeItInBottom">
-            <h2 class="heading-secondary u-m-bottom-medium">Let’<span class="red">s</span> get in touc<span class="blue">h</span>!</h2>
+            <h2 class="heading-secondary u-m-bottom-medium">Let’<span class="red">s</span> get in touch!</h2>
 
             <p class="subheading subheading--wide u-m-bottom-small">
                 Have a project?
@@ -14,13 +14,37 @@
             <p class="subheading subheading--wide">
                 Or just want to say hi?
             </p>
-
         </div>
 
         <div class="u-m-top-large" role="button">
-            <a href="#" class="btn btn--uppercase btn--tall btn--full" title="Send Suresh an email"><strong>Shoot me an email!</strong></a>
+            <a href="#" class="btn btn--uppercase btn--tall btn--full open-modal" title="Send Suresh an email">Shoot me an email!</a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="wrapper">
+            <h2 class="u-center-text heading-lato u-m-bottom-large">Thanks for taking the time to reach out.<br>What can I do for you today?</h2>
+
+            <form action="https://formspree.io/vyassuresh108@gmail.com" class="contact-form" method="POST">
+                <div class="contact-form__name">
+                    <label class="contact-form__label">Name</label>
+                    <input type="text" placeholder="Name" class="contact-form__input" name="Name" required>
+                </div>
+
+                <div class="contact-form__email">
+                    <label class="contact-form__label">Email</label>
+                    <input type="email" placeholder="Email" class="contact-form__input" name="Email" required>
+                </div>
+
+                <div class="contact-form__message">
+                    <label class="contact-form__label">Message</label>
+                    <textarea class="contact-form__textarea contact-form__input" placeholder="Message" name="Message" required></textarea>
+                </div>
+
+                <input type="submit" value="Send" class="contact-form__submit">
+            </form>
         </div>
 
-
+        <span class="icon-x-mark-thick icon contact__close" role="button"></span>
     </div>
 </section>

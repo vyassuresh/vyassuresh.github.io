@@ -28,7 +28,8 @@
         }
     }
 
-    &--white:link, &--white:visited {
+    &--white:link,
+    &--white:visited {
         color: $white-ish;
     }
 
@@ -41,19 +42,36 @@
         text-transform: uppercase;
     }
 
-    &--tall:link, 
+    &--tall:link,
     &--tall:visited {
         padding-top: em(12);
         padding-bottom: em(12);
     }
 
-    &--full:link, &--full:visited {
+    &--full:link,
+    &--full:visited {
         color: $white-ish;
         background-color: $mainRed;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background-color: transparent;
             color: $gray-dark
+        }
+    }
+
+    &--white-ghost {
+        &:link,
+        &:visited {
+            border: 1px solid $white;
+            padding: rem(6) rem(24);
+            text-decoration: none;
+            border-radius: 0px;
+            transition: all 0.2s;
+        }
+
+        &:hover, &:focus {
+            background-color: transparent;
         }
     }
 }

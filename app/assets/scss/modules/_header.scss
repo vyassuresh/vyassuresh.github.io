@@ -27,8 +27,9 @@
         }
 
         @include media(">1200px") {
-            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-            url('../images/cup-of-coffee-1200.jpeg');
+            background-image: linear-gradient(rgba(#000, 0.60), rgba(#000, 0.60)),
+            url('../images/code.jpg');
+            background-position: center 66%;
 
             @include target-retina {
                 background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
@@ -69,7 +70,7 @@
     }
 
     &__intro-text {
-        font-size: responsive 14px 23px;
+        font-size: responsive 13px 22px;
         font-range: 320px 1500px;
         color: darken($white, 10%);
         width: 101%;

@@ -1,13 +1,22 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    svgmin = require('gulp-svgmin'),
+    del = require('del');
 require('gulp-grunt')(gulp);
-var svgmin = require('gulp-svgmin');
 
-gulp.task('minifySVG', function () {
+gulp.task('minifySVG', ['deleteIconsOptim'], function() {
     return gulp.src('./app/assets/images/icons/**/*.svg')
         .pipe(svgmin())
         .pipe(gulp.dest('./app/temp/icons_optim'));
 });
 
-gulp.task('grunticon', function() {
+gulp.task('deleteIconsOptim', function() {
+    return del("./temp/icons_optim");
+});
+
+gulp.task('deleteIcons', function() {
+    return del("./app/assets/icons");
+});
+
+gulp.task('grunticon', ['minifySVG', 'deleteIcons'], function() {
     gulp.start('grunt-grunticon:myIcons')
 });
