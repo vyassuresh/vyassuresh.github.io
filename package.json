@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "grunt": "^1.0.2",
+    "grunt": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-rev": "^8.1.1",
@@ -14,7 +14,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
@@ -30,13 +30,14 @@
     "gulp-sass": "^3.2.0",
     "gulp-svgmin": "^1.2.4",
     "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
     "gulp-watch": "^5.0.0",
     "postcss-center": "^1.1.0",
     "postcss-import": "^11.1.0",
     "postcss-size": "^2.0.0",
     "postcss-units": "^1.1.0",
     "rucksack-css": "^1.0.2",
-    "webpack": "^4.1.1",
+    "webpack": "^4.12.0",
     "webpack-cli": "^2.0.11"
   }
 }

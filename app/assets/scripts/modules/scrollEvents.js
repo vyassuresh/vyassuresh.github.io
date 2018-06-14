@@ -1,11 +1,11 @@
 /*global ScrollMagic, TweenMax, Power0, document, module */
+import ProgressBar from "./progressBar";
 
-var fadeOnScroll = (function() {
+var scrollEvents = (function() {
 
     var controller = new ScrollMagic.Controller();
 
     function fadeOutIntro() {
-
         new ScrollMagic.Scene({
                 triggerElement: ".section--expertise",
                 triggerHook: "0.8",
@@ -21,22 +21,31 @@ var fadeOnScroll = (function() {
     }
 
     function zoomIn() {
-
         new ScrollMagic.Scene({
             triggerElement: '.skill-container',
             triggerHook: "0.6",
             reverse: false
         })
-            .setClassToggle(".zoomItIn", "zoomIn")
-            .addTo(controller);
+        .setClassToggle(".zoomItIn", "zoomIn")
+        .addTo(controller);
+    }
+
+    function startProgressBar() {
+        new ScrollMagic.Scene({
+            triggerElement: '.skill-container',
+            triggerHook: "0.35",
+            reverse: false
+        })
+        .on('start', () => {
+            var progressBar = new ProgressBar();
+        })
+        .addTo(controller);
     }
 
     // Function to make scenes for similar elements
     function makeScene(selectorClass, hook) {
-
         return function() {
             var animationClass = selectorClass.replace('It', '');
-
             var selectorArr = document.querySelectorAll('.' + selectorClass);
 
             for (var i = 0; i < selectorArr.length; i++) {
@@ -45,8 +54,8 @@ var fadeOnScroll = (function() {
                     triggerHook: hook,
                     reverse: false
                 })
-                    .setClassToggle(selectorArr[i], animationClass)
-                    .addTo(controller);
+                .setClassToggle(selectorArr[i], animationClass)
+                .addTo(controller);
             }
         }
     } 
@@ -60,6 +69,7 @@ var fadeOnScroll = (function() {
     fadeInHeading();
     fadeOutIntro();
     zoomIn();
+    startProgressBar();
 });
 
-module.exports = fadeOnScroll;
+module.exports = scrollEvents;

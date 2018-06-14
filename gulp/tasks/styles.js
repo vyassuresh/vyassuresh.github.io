@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     rucksack = require('rucksack-css'),
     postcssUnits = require('postcss-units'),
     postcssSize = require('postcss-size'),
-    postcssCenter = require('postcss-center');
+    postcssCenter = require('postcss-center'),
+    wait = require('gulp-wait');
 
 gulp.task('styles', function() {
     var processors = [
@@ -21,6 +22,7 @@ gulp.task('styles', function() {
         cssnano
     ];
     return gulp.src('./app/assets/scss/style.scss')
+        .pipe(wait(800))
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .on('error', function(errorInfo) {

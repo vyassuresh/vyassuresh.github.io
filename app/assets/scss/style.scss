@@ -10,16 +10,18 @@
 
 @import 'modules/icons';
 @import 'modules/animations';
-@import 'modules/btn';
-@import 'modules/row';
-@import 'modules/wrapper';
+
+@import 'components/btn';
+@import 'components/row';
+@import 'components/wrapper';
+@import 'components/contact-form';
 
 @import 'modules/home';
+@import "modules/section";
 @import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/mobile-nav';
 @import 'modules/projects'; 
 @import 'modules/skills';
 @import 'modules/about-me';
-@import 'modules/contact-form';
 @import 'modules/footer';

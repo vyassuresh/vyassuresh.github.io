@@ -64,10 +64,12 @@
         &:link,
         &:visited {
             border: 1px solid $white;
-            padding: rem(6) rem(24);
+            padding: rem(8) rem(24) rem(7) rem(24);
             text-decoration: none;
             border-radius: 0px;
             transition: all 0.2s;
+            line-height: 1;
+            display: block;
         }
 
         &:hover, &:focus {

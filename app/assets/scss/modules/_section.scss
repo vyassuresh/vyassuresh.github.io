@@ -1,0 +1,44 @@
+.section {
+    padding: rem(80) 0;
+    background-color: #fff;
+
+    &--no-p-bottom {
+        padding-bottom: 0;
+    }
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    &--light {
+        color: $white;
+    }
+
+    &--extend {
+        -webkit-clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+        clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+        padding-bottom: rem(140) !important;
+
+        @include media(">medium") {
+            -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+            clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+        } 
+
+        & + .section {
+            margin-top: rem(-140);
+            padding-top: rem(220);
+        }
+    }
+
+    @include media(">medium") {
+        padding: rem(90) 0;
+    }
+
+    &--dark {
+        background-color: $mainBlue;
+    }
+
+    &:hover .heading-secondary > span::after {
+        width: 100%;
+    }
+}

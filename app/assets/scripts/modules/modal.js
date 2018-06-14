@@ -17,8 +17,6 @@ export default class Modal {
     openModal(e) {
         e.preventDefault();
         this.modal.classList.add('contact--is-visible');
-        return false;
-        console.log('dsg')
     }
 
     closeModal() {

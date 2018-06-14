@@ -21,32 +21,50 @@
 }
 
 .heading-secondary {
-    font-weight: 900;
+    font-weight: 300;
     color: $gray-dark;
     font-size: rem(40);
     letter-spacing: .5px;
     word-spacing: 1px;
+    position: relative;
 
     &--em {
         font-size: em(40);
     }
 
     &--light {
-        color: $white-ish;
+        color: $white;
+    }
+
+    span {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        &::after {
+            content: '';
+            width: rem(60);
+            height: 2px;
+            position: absolute;
+            bottom: rem(-10);
+            left: 0;
+            transition: all 0.5s;
+            background-color: $mainRed;
+        }
     }
 }
 
 .heading-tertiary {
-    font-weight: 700;
+    font-weight: 400;
     color: $gray-dark;
-    font-size: rem(30);
+    font-size: rem(26);
     letter-spacing: .5px;
     word-spacing: 1px;
     margin-bottom: rem(20);
 }
 
 .heading-lato {
-    font-size: responsive 20px 40px;
+    font-size: responsive 16px 40px;
     font-range: 320px 1500px;
     letter-spacing: .5px;
     word-spacing: 1px;
@@ -58,8 +76,9 @@
 
 .subheading {
     text-align: center;
-    font-size: rem(22);
-    font-weight: 300;
+    font-size: rem(18);
+    font-weight: 400;
+    opacity: 0.6;
     width: 90%;
     margin: 0 auto;
 

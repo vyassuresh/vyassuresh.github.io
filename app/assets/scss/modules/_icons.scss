@@ -9,38 +9,52 @@
     }
 }
 
-.icon-slider {
-    size: rem(80);
-    display: block;
-    margin: 0 auto rem(25) auto;
+.icon-skills {
+    size: rem(20); 
+    display: inline-block;
+    margin-right: rem(20);
+    margin-bottom: rem(-5);
+    outline-offset: 7px;
 }
 
 .icon-css3 {
     fill: #1572B6;
+    outline: 1px solid #1572B6;
 }
 
 .icon-html5 {
     fill: #E34F26;
+    outline: 1px solid #E34F26;
+}
+
+.icon-postcss {
+    fill: #DD3735;
+    outline: 1px solid #DD3735;
 }
 
 .icon-javascript {
     fill: #F7DF1E;
+    outline: 1px solid #F7DF1E;
 }
 
 .icon-jquery {
     fill: #0769AD;
+    outline: 1px solid #0769AD;
 }
 
 .icon-sass {
     fill: #CC6699;
+    outline: 1px solid #CC6699;
 }
 
 .icon-git {
     fill: #F14E32;
+    outline: 1px solid #F14E32;
 }
 
 .icon-photoshop {
     fill: #00C8FF;
+    outline: 1px solid #00C8FF;
 }
 
 .icon-logo2 svg, .icon-logo svg {

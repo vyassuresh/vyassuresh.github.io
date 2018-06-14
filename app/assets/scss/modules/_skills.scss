@@ -1,34 +1,36 @@
-.section--skillset {
-    background-color: #eee;
+.skill {
+    width: 70%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: rem(60);
 
-    .skill-container {
-        &::after {
-            @extend .row:after;
-        }
+    &__counter {
+        float: right;
+        position: absolute;
+        top: 0;
+        right: rem(10);
+    }
+}
 
-        .skill {
-            float: left;
-            width: 50%;
+.progressBar {
+    height: 16px;
+    width: 100%;
+    border: 1px solid transparentize($color: $mainRed, $amount: 0.5);
+    position: relative;
+    margin-top: rem(20);
+    margin-left: rem(-10);
 
-            &:nth-child(-n + 6) {
-                margin-bottom: rem(60);
-            }
-
-            @include media(">500px") {
-                width: 33.33%;
-            }
-
-            @include media(">medium") {
-                width: 25%;
-
-                &:nth-child(-n + 4) {
-                    margin-bottom: rem(80);
-                }
-
-                &:nth-child(n + 5) {
-                    margin-bottom: 0;
-                }
-            }
-        }
+    &__fill {
+        height: 8px;
+        background-color: $mainRed;
+        opacity: 1;
+        width: 0;
+        margin-left: 3px;
+        margin-left: 3px;
+        max-width: calc(100% - 6px);
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: width 1.5s;
     }
 }
