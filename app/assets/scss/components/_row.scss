@@ -5,7 +5,7 @@
         clear: both;
     }
 
-    @include media(">700px") {
+    @include media(">700px", "landscape") {
         > *:not(:first-child) {
             margin-left: $gutter-x;
         }

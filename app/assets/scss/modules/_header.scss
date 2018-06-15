@@ -11,7 +11,7 @@ $opacity: 0.8;
         height: 100%;
         background-size: cover;
         background-image: linear-gradient(to bottom left, rgba($mainBlue, $opacity), rgba($mainBlue, $opacity)),
-        url('../images/code.jpg');
+        url('../images/code-320.jpeg');
         background-position: center 66%;
 
         @include target-retina {

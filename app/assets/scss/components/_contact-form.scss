@@ -77,13 +77,21 @@
         color: $white-ish;
         font-size: rem(16);
         height: rem(50);
-        margin-bottom: 15%;
+        margin-bottom: 10%;
         font-family: $josefin;
         transition: border-bottom 0.2s;
         width: 100%;
 
         @include media(">medium") {
             width: 85%;
+            
+            @supports(display: grid) {
+                margin-bottom: 15%;
+            }
+        }
+
+        &:focus {
+            outline: none;
         }
 
         &:focus:invalid {
@@ -108,18 +116,18 @@
 
     &__textarea {
         height: 70%;
-        width: 100%;
     }
 
     &__submit {
         grid-area: submit;
-        align-self: center;
+        align-self: end;
         justify-self: center;
         text-decoration: none;
         padding: em(10) em(40);
         border: 2px solid $mainRed;
         border-radius: 100px;
-        display: inline-block;
+        display: block;
+        margin: 0 auto;
         transition: all 0.3s;
         color: $white-ish;
         background-color: $mainRed;

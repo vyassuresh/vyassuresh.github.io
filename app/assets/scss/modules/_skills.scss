@@ -3,12 +3,12 @@
     text-transform: uppercase;
     margin: 0 auto;
     margin-bottom: rem(60);
+    position: relative;
 
     &__counter {
-        float: right;
-        position: absolute;
         top: 0;
-        right: rem(10);
+        position: absolute;
+        right: .625rem;
     }
 }
 

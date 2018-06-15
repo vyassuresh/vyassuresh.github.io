@@ -1,95 +1,58 @@
-.section--about-me {
-    &.lazyloaded {
-        background-size: cover;
-        background-color: #333;
-        background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-        url('../images/flowers-320.jpeg');
-
-        @include target-retina {
-            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-            url('../images/flowers-320-2x.jpeg');
-        }
-
-        @include media(">750px") {
-            background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-            url('../images/flowers-750.jpeg');
-
-            @include target-retina {
-                background-image: linear-gradient(rgba(#000, 0.75), rgba(#000, 0.75)),
-                url('../images/flowers-750-2x.jpeg');
-            }
-        }
-
-        @include media(">1200px") {
-            background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-            url('../images/flowers-1200.jpeg');
-
-            @include target-retina {
-                background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-                url('../images/flowers-1200-2x.jpeg');
-            }
-        }
-
-        @include media(">1600px") {
-            background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-            url('../images/flowers-1600.jpeg');
-
-            @include target-retina {
-                background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-                url('../images/flowers-1600-2x.jpeg');
-            }
-        }
-
-        @include media(">2000px") {
-            background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-            url('../images/flowers-2000.jpeg');
-
-            @include target-retina {
-                background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
-                url('../images/flowers-2000-2x.jpeg');
-            }
-        }
-    }
-}
-
-.user-text {
-    width: 90%;
-    margin: 0 auto;
+.about-me {
+    position: relative;
 
     &::after {
         @extend .row:after;
     }
 
-    &__image-container {
-        display: block;
-        margin: 0 auto rem(40) auto;
-        shape-outside: circle(50% at 50% 50%);
-        text-align: center;
+    &__wrapper {
+        max-width: 83%;
+        margin: 0 auto;
+    }
+
+    &__intro {
+        font-size: rem(28);
+        word-spacing: 2px;
+        width: 94%;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        margin-top: rem(75);
+        z-index: 1;
+        color: transparentize($color: $gray, $amount: 0.4);
 
         @include media(">500px") {
-            float: left;
-            margin: 0 5% 0 0;
+            width: 75%;
         }
-    }
-    
-    &__image {
-        size: rem(200);
-        border-radius: 50%;
-        border: 2px solid $gray-dark;
-        padding: 8px;
 
-        &--light {
-            border-color: $white-ish;
+        @include media("landscape") {
+            width: 65%;
         }
     }
 
-    &__text {
-        font-size: rem(20);
-        line-height: 1.7;
-        font-weight: 300;
+    &__photo-wrapper {
+        opacity: 0.7;
 
-        &--light {
-            color: #e6e6e6;
+        @include media("<1000px") {
+            opacity: 0.2;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        max-width: 70%;
+        max-height: 628px;
+        right: 0;
+        z-index: 0;
+        bottom: rem(80);
+
+        @include media(">500px") {
+            max-width: 55%;
+        }
+
+        @include media("landscape", ">800px") {
+            bottom: 0;
+            max-width: 35%;
+            max-height: 100%;
         }
     }
 }

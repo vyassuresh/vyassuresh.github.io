@@ -18,7 +18,7 @@ export default class ProgressBar {
     animatedCounting(valueElm, totalValue) {
         var counter = { number: 0};
 
-        TweenLite.to(counter, 1, {
+        TweenMax.to(counter, 1, {
             number: totalValue,
             roundProps: "number",
             onUpdate: updateHandler,

@@ -57,3 +57,9 @@
 .u-no-b-margin {
     margin-bottom: 0 !important;
 }
+
+.u-center-till-medium {
+    @include media("<medium") {
+        text-align: center;
+    }
+}

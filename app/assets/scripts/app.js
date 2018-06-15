@@ -1,16 +1,16 @@
 var browserHacks = require('./modules/browserHacks.js');
 var scrollEvents = require('./modules/scrollEvents');
 var mobileMenu = require('./modules/mobileMenu.js');
-var projectSlider = require('./modules/projectSlider.js');
 var parallax = require('./modules/parallax.js');
 var smoothScrolling = require('./modules/smoothScrolling.js');
 import Modal from "./modules/modal";
 import ProgressBar from './modules/progressBar';
+import Arrayfrom from "./polyfills/Arrayfrom";
 
+var arrayFrom = new Arrayfrom();
 browserHacks();
 scrollEvents();
 mobileMenu();
-projectSlider();
 parallax();
 smoothScrolling();
 var modal = new Modal();

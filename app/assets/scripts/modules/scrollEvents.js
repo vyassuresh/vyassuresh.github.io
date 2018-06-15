@@ -62,7 +62,7 @@ var scrollEvents = (function() {
 
     var fadeInHeading = makeScene('fadeItInBottom', 0.8);
     var fadeInLeft = makeScene('fadeItInLeft', 0.7);
-    var fadeInRight = makeScene('fadeItInRight', 0.7);
+    var fadeInRight = makeScene('fadeItInRight', 0.3);
 
     fadeInRight();
     fadeInLeft();

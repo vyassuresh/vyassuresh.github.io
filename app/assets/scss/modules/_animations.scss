@@ -3,16 +3,16 @@
 
     &.fadeInBottom {
         @include fadeInDown( $function: ease-in-out,
-        $duration: 0.7s)
+        $duration: 0.7s, $fill: both)
     }
 }
 
 .fadeItInLeft {
     opacity: 0;
-
+    
     &.fadeInLeft {
         @include fadeInLeft( $function: ease-in-out,
-        $duration: 0.7s)
+        $duration: 0.7s, $fill: both);
     }
 }
 
@@ -21,7 +21,7 @@
 
     &.fadeInRight {
         @include fadeInRight( $function: ease-in-out,
-        $duration: 0.7s)
+        $duration: 1.2s, $fill: both)
     }
 }
 
