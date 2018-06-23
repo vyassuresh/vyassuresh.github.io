@@ -11,22 +11,6 @@ export default class ProgressBar {
             var valueElm = elm.parentElement.parentElement.querySelector('.skill__counter');
             var totalValue = valueElm.dataset.value;
             elm.style.width = `${totalValue}%`;
-            this.animatedCounting(valueElm, totalValue);
         });
-    }
-
-    animatedCounting(valueElm, totalValue) {
-        var counter = { number: 0};
-
-        TweenMax.to(counter, 1, {
-            number: totalValue,
-            roundProps: "number",
-            onUpdate: updateHandler,
-            ease: Linear.easeNone
-        });
-
-        function updateHandler() {
-            valueElm.innerHTML = `${counter.number}%`;
-        }
     }
 }
