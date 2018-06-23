@@ -13,4 +13,11 @@
   "_properties";
 
 // Import the animations
-@import "_fading-entrances/fading-entrances.scss", "_zooming-entrances/zooming-entrances.scss";
+@import "_fading-entrances/fading-entrances.scss",
+"_zooming-entrances/zooming-entrances.scss",
+"_zooming-exits/zooming-exits.scss",
+"_specials/specials.scss",
+"_fading-exits/fading-exits.scss",
+"_bouncing-entrances/bouncing-entrances.scss",
+"_bouncing-exits/bouncing-exits.scss",
+"_flippers/flippers.scss";

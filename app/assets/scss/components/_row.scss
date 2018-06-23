@@ -1,18 +1,21 @@
 .row {
+    display: block;
+
     &:after {
         content: '';
         display: table;
         clear: both;
     }
 
-    @include media(">700px", "landscape") {
+    @include media("landscape-or-medium") {
+        display: flex;
+
         > *:not(:first-child) {
             margin-left: $gutter-x;
         }
     }
 
     &__4 {
-        float: left;
         width: 100%;
         
         &:not(:last-child) {
@@ -29,18 +32,16 @@
     }
 
     &__6 {
-        float: left;
         width: 100%;
         margin-bottom: rem(60);
 
-        @include media("landscape") {
+        @include media("landscape-or-medium") {
             width: calc((100% - (1 * #{$gutter-x})) / 2);
             margin-bottom: 0;
         }
     }
 
     &__8 {
-        float: left;
         width: 100%;
         margin-bottom: rem(60);
 

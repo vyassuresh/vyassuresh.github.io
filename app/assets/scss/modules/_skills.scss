@@ -10,6 +10,12 @@
         position: absolute;
         right: .625rem;
     }
+
+    @include media(">gridbp") {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .progressBar {

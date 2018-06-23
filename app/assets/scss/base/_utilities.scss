@@ -63,3 +63,21 @@
         text-align: center;
     }
 }
+
+.u-m-top-20 {
+    margin-top: rem(20) !important;
+}
+
+.u-flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.u-relative {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

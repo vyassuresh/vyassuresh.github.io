@@ -11,9 +11,9 @@ var smoothScrolling = function() {
                 TweenMax.to(window, 1.5, {
                     scrollTo: {
                         y: target,
-                        autokill: true,
-                        ease: Circ.easeInOut
-                    }
+                        autokill: true
+                    },
+                    ease: Circ.easeInOut
                 });
             });
         }

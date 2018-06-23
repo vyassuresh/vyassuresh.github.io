@@ -17,6 +17,11 @@
     transform: scale(1.2);
     transition: all 0.3s ease-out;
 
+    & > div {
+        width: 70%;
+        max-width: 1140px;
+    }
+
     &--is-visible {
         opacity: 1;
         visibility: visible;
@@ -31,7 +36,7 @@
         cursor: pointer;
         transition: all 0.2s ease-in;
 
-        @include media(">medium") {
+        @include media("landscape-or-medium") {
             top: 10%;
         }
 
@@ -46,10 +51,10 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, auto) 100px;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: "name" "email" "msg" "submit";
 
-    @include media(">medium") {
+    @include media("landscape-or-medium") {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas : "name msg" "email msg" "submit submit";
@@ -82,7 +87,7 @@
         transition: border-bottom 0.2s;
         width: 100%;
 
-        @include media(">medium") {
+        @include media("landscape-or-medium") {
             width: 85%;
             
             @supports(display: grid) {
@@ -120,7 +125,6 @@
 
     &__submit {
         grid-area: submit;
-        align-self: end;
         justify-self: center;
         text-decoration: none;
         padding: em(10) em(40);
@@ -133,8 +137,13 @@
         background-color: $mainRed;
         cursor: pointer;
         font-size: rem(18);
+        margin-top: 3%;
 
         @include media("<medium") {
+            margin-top: rem(30);
+        }
+
+        @include media("portrait") {
             margin-top: rem(30);
         }
 

@@ -1,0 +1,114 @@
+.slide {
+    $slide: &;
+
+    &__text-content {
+        @include media("landscape-or-medium") {
+            width: 80%;
+        }
+        justify-content: center;
+    }
+
+    &__image {
+        width: 100%;
+        box-shadow: 0px 2.5rem 6rem transparentize($color: $black, $amount: 0.6);
+        align-self: center;
+        position: relative;
+    }
+
+    &.animateIn {
+        #{$slide}__image {
+            @include fadeInUp($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both,
+            $delay: 0.6s);
+            z-index: 2;
+        }
+
+        a {
+            @include zoomIn($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both,
+            $delay: 0.6s);
+        }
+
+        #{$slide}__text-content {
+            @include fadeInRight($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both,
+            $delay: 0.6s);
+        }
+    }
+
+    &.animateOut {
+        #{$slide}__image {
+            @include fadeOutDown($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both);
+        }
+
+        a {
+            @include zoomOut($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both);
+        }
+
+        #{$slide}__text-content {
+            @include fadeOutLeft($function: ease-in-out,
+            $duration: 0.7s,
+            $fill: both);
+        }
+    }
+}
+
+.wrapper--percentage:hover .controls,
+.wrapper--percentage:focus .controls {
+    opacity: 1;
+    visibility: visible;
+}
+
+.controls {
+    opacity: 0.3;
+    transition: all 0.3s ease-in;
+
+    %control-button {
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        size: rem(30);
+        border: 3px solid $mainBlue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $mainBlue;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            border-color: $mainRed;
+            color: $mainRed;
+        }
+
+        span {
+            font-size: rem(20);
+            font-weight: 700;
+            font-family: 'Lato';
+            line-height: 1;
+            transform: scaleY(1.2);
+        }
+    }
+
+    &--prev {
+        @extend %control-button;
+        left: -9%;
+    }
+
+    &--next {
+        @extend %control-button;
+        right: -9%;
+    }
+}

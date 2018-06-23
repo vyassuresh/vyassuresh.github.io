@@ -1,14 +1,6 @@
 .about-me {
     position: relative;
-
-    &::after {
-        @extend .row:after;
-    }
-
-    &__wrapper {
-        max-width: 83%;
-        margin: 0 auto;
-    }
+    @extend .row;
 
     &__intro {
         font-size: rem(28);

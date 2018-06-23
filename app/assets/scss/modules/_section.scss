@@ -1,18 +1,6 @@
 .section {
-    padding: rem(80) 0;
+    padding: rem(90) 0;
     background-color: #fff;
-
-    &--no-p-bottom {
-        padding-bottom: 0;
-    }
-
-    &--no-padding {
-        padding: 0;
-    }
-
-    &--light {
-        color: $white;
-    }
 
     &--extend {
         @supports(clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0)) {
@@ -27,7 +15,7 @@
 
             &+.section {
                 margin-top: rem(-140);
-                padding-top: rem(220);
+                padding-top: rem(230);
             }
         }
     }
@@ -38,9 +26,22 @@
 
     &--dark {
         background-color: $mainBlue;
+        color: $white-ish;
     }
 
-    &:hover .heading-secondary > span::after {
+    &--gray {
+        background-color: #eeeeee;
+    }
+
+    &:hover .heading-secondary>span::after {
         width: 105%;
+    }
+
+    &--no-p-bottom {
+        padding-bottom: 0;
+    }
+
+    &--no-padding {
+        padding: 0;
     }
 }

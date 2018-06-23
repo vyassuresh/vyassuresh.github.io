@@ -72,6 +72,10 @@
     font-weight: 300;
     color: $white-ish;
 
+    &--dark {
+        color: $gray;
+    }
+
 }
 
 .subheading {

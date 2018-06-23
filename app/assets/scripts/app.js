@@ -6,6 +6,7 @@ var smoothScrolling = require('./modules/smoothScrolling.js');
 import Modal from "./modules/modal";
 import ProgressBar from './modules/progressBar';
 import Arrayfrom from "./polyfills/Arrayfrom";
+import Slider from "./modules/slider";
 
 var arrayFrom = new Arrayfrom();
 browserHacks();
@@ -14,6 +15,7 @@ mobileMenu();
 parallax();
 smoothScrolling();
 var modal = new Modal();
+var slider = new Slider();
 
 const inputs = Array.from(document.querySelectorAll('.contact-form__input'));
 inputs.forEach(el => {

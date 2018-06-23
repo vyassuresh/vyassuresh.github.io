@@ -76,4 +76,15 @@
             background-color: transparent;
         }
     }
+
+    &--no-expand {
+        &:hover,
+        &:focus {
+            padding: em(8) em(32);
+        }
+    }
+
+    &--m-right {
+        margin-right: rem(20);
+    }
 }
